@@ -1,9 +1,8 @@
 @charset "utf-8";
 /* 1rem->10px font-size: 1.3rem; =13픽셀 */
-[class*="inner"]{max-width:1260px; margin:auto;}
-[class*="inner"]{height: inherit;}
-.cover{width: 100%;}
 html{overflow-y: scroll;}
+.cover{width: 100%;}
+.inner{width: 100%; max-width:1260px; margin:auto;}
 .pr{position:relative;}
 .pa{position:absolute;}
 .fl{float:left;}
@@ -13,7 +12,7 @@ html{overflow-y: scroll;}
 
 /*header*/
     /*header_top영역 */
-#header{width: 100%; /* height: 10rem; */ background-color: #124474;}
+#header{width: 100%; background-color: #124474;}
     #header_top{border-bottom:1px solid #d4d4d4; height:40px}
         .top ul{text-align: right; display:flex;align-items: center; justify-content:end;}
         .top ul li{position:relative;}
@@ -51,22 +50,21 @@ html{overflow-y: scroll;}
         .top>ul>li>.lang_opt{display:none}
         .top>ul>li>input:checked~.lang_opt{display:block;}
     /* header_bottom영역 */
-    #header_bottom{width: 100%;/*  z-index:100; *//* height: 60px; */
-    background: linear-gradient(180deg, #124474 60px, #ffffff 60px);}
-      .bottom{;}
-        .bottom h1{width: 20%; position:absolute; top:10px; left:-30px;}
+    #header_bottom{width: 100%; z-index:1000; 
+    background: linear-gradient(180deg, #124474 55px, #ffffff 55px);}
+      
+    
+    
+    .bottom{}
+        .bottom h1{width: 18%;}
         .bottom h1 a{width: 100%; height: 100%; display:block; margin: auto;}
-        .bottom h1 a img{display: block;}
-
-        .bottom nav{line-height: 60px;text-align: center;} 
-         /* height: 60px; *//* margin: 0 0 0 250px */
-        .bottom nav ul{}
+        .bottom nav{line-height:50px;text-align: center;} 
         .bottom nav ul li{display: inline-block; padding: 0px 8px;}
-        .bottom nav ul li a{color:#e8e8e8; font-weight: 600; font-size: 1.7em; padding:20px 10px;}
-        .bottom .hamburger{position:absolute; background-color: #d4d4d4; top:12px; right:0;}
+        .bottom nav ul li a{color:#e8e8e8; font-weight: 600; font-size: 1.7em; padding:15px 10px;}
+        .bottom .hamburger{position:absolute; background-color: #d4d4d4; top:10px; right:60px;}
         /* gnb menu */
     .gnb{}
-    .gnb_menu{display: none;}/* transition을 못주겠음 */
+    .gnb_menu{display: none; padding:0 0; }/* transition을 못주겠음 */
         .gnb_menu ul{display: flex; align-items:flex-start; justify-content: space-around;}
         .gnb .gnb_menu ul li dl {text-align: left; position: relative;}
         .gnb_menu li dt {font-size: 18px; font-weight:600;}
@@ -75,7 +73,7 @@ html{overflow-y: scroll;}
             font-weight:550; }
     
     .gnb>ul>li:hover>a{color:#2885dd}
-    .gnb:hover .gnb_menu{display:block;}
+    .gnb:hover .gnb_menu{display:block; padding:10px 0;transition:all 2s;}
         .gnb ul li dl::after{
             content:'';
             display: block;
@@ -93,14 +91,15 @@ html{overflow-y: scroll;}
             visibility: hidden;
         }
         .gnb ul li dl dd:hover::after{visibility: visible;}
-        .gnb ul li dl dd:hover{text-decoration: underline blue;} /* 텍스트언더라인 수정요 */
+        .gnb ul li dl dd:hover{text-decoration: underline blue;} 
+        /* 텍스트언더라인 수정요 */
         /* header 끝 */
 
 
 
 
 #container{width: 100%;background-color: #124474; height: 600px;}
-    #banner{/* background-color: #124474 */;}
+    #banner{/* background-color: #124474 */}
 
         .main_info {/* background-color: #124474; */}
         .main_info .intro_text{top:100px; left:0; /* background-color: #124474; */}
@@ -131,9 +130,10 @@ html{overflow-y: scroll;}
         .main_slide{}
         .main_slide .banner{}
         .main_slide .banner img{width: 1000px; position:absolute; top:0; right:-250px;}
-        .main_slide .link_list{position: absolute;top:120px; right:-150px; z-index:10; width: 200px; height:300px; background-color: rgba(13, 13, 13, 0.348);}
+        .main_slide .link_list{position: absolute;top:160px; right:-180px; z-index:10; width: 200px; height:300px; background-color: rgba(13, 13, 13, 0.348);}
         .link_list ul{display: flex; flex-wrap: wrap;}
         .link_list ul li{width: 90px; height: 90px; margin:10px auto; background-color: rgba(13, 13, 13, 0.348);}
+        
         .link_list ul li a{display: block; color: #d4d4d4;}
 
 
