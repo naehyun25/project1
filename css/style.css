@@ -100,10 +100,7 @@ html{overflow-y: scroll;}
         .gnb ul li dl dd:hover{text-decoration: underline blue;} 
         /* 텍스트언더라인 수정요 */
         /* header 끝 */
-
-
-
-
+/* 메인 시작 - section1 */
 #container{width: 100%;background-color: #124474; height: 600px;}
     #intro{/* background-color: #124474 */}
 
