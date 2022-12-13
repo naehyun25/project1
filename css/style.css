@@ -64,7 +64,7 @@ html{overflow-y: scroll;}
         .bottom .hamburger{position:absolute; background-color: #d4d4d4; top:10px; right:60px;}
         /* gnb menu */
     .gnb{}
-    .gnb_menu{display: none; padding:0 0; }/* transition을 못주겠음 */
+    .gnb_menu{display: none; overflow:hidden;  transition:padding 0.5s; padding:0 0;}/* transition을 못주겠음 */
         .gnb_menu ul{display: flex; align-items:flex-start; justify-content: space-around;}
         .gnb .gnb_menu ul li dl {text-align: left; position: relative;}
         .gnb_menu li dt {font-size: 18px; font-weight:600;}
@@ -73,7 +73,7 @@ html{overflow-y: scroll;}
             font-weight:550; }
     
     .gnb>ul>li:hover>a{color:#2885dd}
-    .gnb:hover .gnb_menu{display:block; padding:10px 0;transition:all 2s;}
+    .gnb:hover .gnb_menu{display:block; padding:10px 0;}
         .gnb ul li dl::after{
             content:'';
             display: block;
@@ -129,12 +129,21 @@ html{overflow-y: scroll;}
 
         .main_slide{}
         .main_slide .banner{}
-        .main_slide .banner img{width: 1000px; position:absolute; top:0; right:-250px;}
-        .main_slide .link_list{position: absolute;top:160px; right:-180px; z-index:10; width: 200px; height:300px; background-color: rgba(13, 13, 13, 0.348);}
+        .main_slide .banner img{width: 1100px; position:absolute; top:70px; right:-400px;}
+        .main_slide .link_list{position: absolute;top:220px; right:-250px; z-index:10; width: 200px; height:300px;/*  background-color: rgba(13, 13, 13, 0.348); */}
         .link_list ul{display: flex; flex-wrap: wrap;}
-        .link_list ul li{width: 90px; height: 90px; margin:10px auto; background-color: rgba(13, 13, 13, 0.348);}
+        .link_list ul li{width: 90px; height: 90px; margin:5px auto; background-color: rgba(13, 13, 13, 0.534); border-radius: 20px;}
         
-        .link_list ul li a{display: block; color: #d4d4d4;}
-
+        .link_list ul li a{display: block; height:30px; font-size: 12px; font-weight: 700; color: #d4d4d4; text-align: center; padding-top: 65%; line-height: 16px;}
+        .link_list ul li div{width: 90px; height: 90px;}
+        .link_list ul li .imgbox1{background: url(../images/ico-place-white.png) no-repeat 50% 25%;}
+        .link_list ul li .imgbox2{background: url(../images/ico-campground-white.png) no-repeat 50% 25%;}
+        .link_list ul li .imgbox3{background: url(../images/ico-together-white.png) no-repeat 50% 25%;}
+        .link_list ul li .imgbox4{background: url(../images/ico-education-white.png) no-repeat 50% 25%;}
+        .link_list ul li .imgbox5{background: url(../images/ico-commentary-white.png) no-repeat 50% 25%;}
+        .link_list ul li .imgbox6{background: url(../images/ico-unification-white.png) no-repeat 50% 25%;}
+       
+       
+        
 
         
