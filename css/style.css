@@ -9,6 +9,7 @@ html{overflow-y: scroll;}
 .fr{float:right;}
 .cb{clear:both;}
 .cf::after{content:"";display:block;clear:both;}
+<<<<<<< HEAD
 .skip_menu{
     position:fixed;
     left:0; top:0;
@@ -20,6 +21,9 @@ html{overflow-y: scroll;}
 }
 /* skipmenu 추가 */
 .skip_menu:focus{transform:translateY(0%);}
+=======
+
+>>>>>>> 342609f9ec28a5de062cd867ed6341e40cac5696
 /*header*/
     /*header_top영역 */
 #header{width: 100%; background-color: #124474;}
@@ -61,7 +65,14 @@ html{overflow-y: scroll;}
         .top>ul>li>input:checked~.lang_opt{display:block;}
     /* header_bottom영역 */
     #header_bottom{width: 100%; z-index:1000; 
+<<<<<<< HEAD
     background: linear-gradient(180deg, #124474 80px, #ffffff 80px);}
+=======
+    background: linear-gradient(180deg, #124474 55px, #ffffff 55px);}
+      
+    
+    
+>>>>>>> 342609f9ec28a5de062cd867ed6341e40cac5696
     .bottom{}
         .bottom h1{width: 18%;}
         .bottom h1 a{width: 100%; height: 100%; display:block; margin: auto;}
@@ -78,6 +89,10 @@ html{overflow-y: scroll;}
         .gnb_menu li dd {line-height: 30px; box-sizing: border-box; }
         .gnb_menu ul li dl dd a {font-size: 14px; padding:0; color:rgb(78, 78, 78); 
             font-weight:550; }
+<<<<<<< HEAD
+=======
+    
+>>>>>>> 342609f9ec28a5de062cd867ed6341e40cac5696
     .gnb>ul>li:hover>a{color:#2885dd}
     .gnb:hover .gnb_menu{display:block; padding:10px 0;}
         .gnb ul li dl::after{
@@ -100,19 +115,34 @@ html{overflow-y: scroll;}
         .gnb ul li dl dd:hover{text-decoration: underline blue;} 
         /* 텍스트언더라인 수정요 */
         /* header 끝 */
+<<<<<<< HEAD
 /* 메인 시작 - section1 */
+=======
+
+
+
+
+>>>>>>> 342609f9ec28a5de062cd867ed6341e40cac5696
 #container{width: 100%;background-color: #124474; height: 600px;}
     #intro{/* background-color: #124474 */}
 
         .intro_info {/* background-color: #124474; */}
         .intro_info .intro_text{top:100px; left:0; /* background-color: #124474; */}
+<<<<<<< HEAD
         .intro_info .intro_text h3{
+=======
+        .intro_info .intro_text h2{
+>>>>>>> 342609f9ec28a5de062cd867ed6341e40cac5696
             color: #d4d4d4;
             font-size: 22px;
             font-weight: 600;
             line-height: 22px;
         }
+<<<<<<< HEAD
         .intro_info .intro_text h2{
+=======
+        .intro_info .intro_text h1{
+>>>>>>> 342609f9ec28a5de062cd867ed6341e40cac5696
             color: #d4d4d4;
             font-size: 48px;
             font-weight: 900;
