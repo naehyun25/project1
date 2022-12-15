@@ -151,20 +151,29 @@ background: url(../images/ico-plus-blue.png) no-repeat;
     width: 50%;
     padding: 60px 90px 45px;
 }
-.memorial_box .m_list{ ;}
+.memorial_box .m_list{ }
  .m_list ul{display: flex;}
  .m_list ul li{padding:0 10px;}
  .m_list ul li a{font-size: 16px; color:#ffffff; font-weight: 500;}
+ /* .m_list::before{content: '●'; display: block; position:absolute; font-size: 12px; color:#fff; top:0px; right:0px} */
+ .m_list ul li a:hover{border-bottom: 1px solid #ffffff;}
+ .m_list ul li a:hover::after{content: '●'; display: block; position:absolute; font-size: 6px; color:#fff; top:-16px; right:24px}{border-bottom: 1px solid #ffffff;}
 
  .m_text{color:#fff;/*  background-color: #000; */ padding-top:14px;}
  .m_text h3{font-size: 40px; font-weight:300; color:#fff}
- .m_text>h3>span{font-weight:100; color:red} /* 왜 안먹힐까.... */
- .m_text p {font-size:14px; font-weight: 550; padding:10px 0 10px 22px; line-height: 24px;}
+ .m_text>h3>span{font-weight:700;} /* 왜 안먹힐까.... */
+ .m_text p {font-size:16px; word-spacing: -2px; font-weight: 500; padding:10px 0 10px 22px; line-height: 24px;}
 
- .m_text>div{background-color: #124474; height:54px; width:138px;
-    border-radius:;}
- .m_text>div>a{color:#ffffff; font-size: 16px; font-weight: 500; padding-left: 28px; line-height: 54px;}
- 
+ .m_text>div{background-color: #124474; height:48px; width:138px; margin:20px 0 0 20px;
+    border-radius:34px;}
+ .m_text>div>a{color:#ffffff; font-size: 16px; font-weight: 500; padding-left: 28px; line-height: 48px;}
+ .m_control .bar{width:340px; height:1px; box-sizing: border-box; border-bottom:1px solid #fff;
+    top:48px;}
+    .m_control img{top:-6px; right:-32px; height:12px;}
+    .bar::after{content: '◎'; display: block; position:absolute; font-size: 16px; color:#fff; top:-14px; right:-96px}
+    .bar::before{content: '◎'; display: block; position:absolute; font-size: 16px; color:#fff; top:-14px; right:-64px}
+
+    
 
 
 .memorial_img{width: 50%;}
