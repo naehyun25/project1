@@ -43,7 +43,7 @@ html { overflow-y: scroll; }
 .bottom nav { line-height: 50px; text-align: center; } 
 .bottom nav ul li { display: inline-block; padding: 0 8px; } 
 .bottom nav ul li a { color: #e8e8e8; font-weight: 600; font-size: 1.7em; padding: 15px 10px; } 
-.bottom .hamburger { position: absolute; background-color: #d4d4d4; top: 10px; right: 60px; } 
+.bottom .hamburger { position: absolute; top: 10px; right: 60px; } 
 .gnb_menu { display: none; overflow: hidden; transition: padding 0.5s; padding: 0 0; } /* transition을 못주겠음 */
 .gnb_menu ul { display: flex; align-items: flex-start; justify-content: space-around; } 
 .gnb .gnb_menu ul li dl { text-align: left; position: relative; } 
@@ -89,7 +89,7 @@ dl > .pa { top: 8px; right: 190px; }
 .swipper img { width: 10px; padding: 20px 0 0 12px; } 
 .banner_list ul { display: flex; flex-wrap: wrap; } 
 .banner_list ul li { width: 95px; height: 95px; margin: 5px auto; background-color: rgba(13, 13, 13, 0.534); border-radius: 20px; } 
-.color2 { width: 1000px; height: 1000px; background-color: #f4f8fb; top: 0px; left: -24px; z-index: -1; } 
+.color2 { width: 1000px; height: 1000px; background-color: #f4f8fb; top: 0px; left: 52px; z-index: -1; } 
 .banner_list ul li a { display: block; height: 28px; font-size: 13px; font-weight: 700; color: #d4d4d4; text-align: center; padding-top: 70%; line-height: 16px; } 
 .banner_list ul li div { width: 90px; height: 90px; } 
 .banner_list ul li .imgbox1 { background: url(../images/ico-place-white.png) no-repeat 50% 25%; } 
@@ -113,17 +113,35 @@ dl > .pa { top: 8px; right: 190px; }
 .board_bnt { background: url(../images/ico-stop-blue.png) no-repeat; background-size: contain; width: 15px; top: 15px; left: 630px; height: 10px; } 
 .board_bnt::after { content: "◎"; color: #1e90e4; font-size: 15px; display: block; position: absolute; top: -10px; right: -30px; } 
 
-.board_table { width: 40%; transform: translateY(-88px); height: 284px; border-bottom: 2px solid #686763; /* height 줘야 감쌀수 있음 */}
-.board_table > ul > li { padding: 20px 38px 10px 20px; margin-bottom: 30px; box-sizing: border-box; border-bottom: 2px solid #686763; } 
+.board_table { width: 40%; transform: translateY(-88px); height: 284px; border-bottom: 2px solid #686763; box-sizing: border-box; /* height 줘야 감쌀수 있음 */}
+.board_table > ul{height:60px; border-bottom: 1px solid #c2c2c2;}
+.board_table > ul > li { padding: 20px 18px 10px 18px; margin-bottom: 30px; box-sizing: border-box; } 
 .board_table > ul > li > a { font-size: 18px; font-weight: 600; color: #686763; } 
 .board_table > ul > li > ul { top: 60px; left: 0; margin-top: 10px; } 
 .board_table > ul > li > ul li { margin-bottom: 10px; } 
-.board_table > ul > li > ul > li a { font-size: 14px; font-weight: 500; justify-content: space-between; /* 글씨크기 수정, span 이용 위치 및 overflow 적용 */}
-.board_table > ul > li > ul > li a span { display: inline-block; width: 400px; height: 25px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; } 
+.board_table > ul > li > ul > li a span { display: inline-block; width: 400px; height: 25px;
+    font-size: 16px; font-weight: 500; color:#000; 
+    overflow: hidden; white-space: nowrap; text-overflow: ellipsis; 
+} 
+.board_table > ul > li > ul > li>a>span:nth-child(2){color:#7c7c7c;}
+.board_table > ul > li:hover { border-bottom: 4px solid #124474;  } 
+/* 시각적으로는 after로선넣는것같음 */
 
+/* board_table */
 .board_table ul li ul { visibility: hidden; } 
 .board_table > ul > li:first-child ul { visibility: visible; } 
-.board_table > ul > li:hover { border-bottom: 3px solid navy; } /* 시각적으로는 after로선넣는것같음 */
 .board_table > ul > li:hover > a { font-weight: 900; } /* 시각적으로는 after로선넣는것같음 */
 .board_table > ul > li:hover ul { visibility: visible; position: fixed; z-index: 101; background-color: #fff; } 
 .board_table > ul > li:nth-child(n + 2):hover:first-child ul { visibility: hidden; } 
+.board_table>ul>li>ul>li:hover>a>span:nth-child(1) {text-decoration:underline;}
+
+.board_table>ul>li:last-child::after
+{content:'';
+display: block;
+position: absolute;
+height:21px;
+width:21px;
+top:26px;
+right:18px;
+background: url(../images/ico-plus-blue.png) no-repeat;
+}
