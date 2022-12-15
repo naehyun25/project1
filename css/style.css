@@ -130,7 +130,7 @@ dl > .pa { top: 8px; right: 190px; }
 .board_table > ul > li > ul > li:hover > a > span:nth-child(1) { text-decoration: underline; } 
 .board_table > ul > li:last-child::after { content: ""; display: block; position: absolute; height: 21px; width: 21px; top: 26px; right: 18px; background: url(../images/ico-plus-blue.png) no-repeat; } 
 .memorial_board { height: 440px; background-color: #2180dc; } 
-.memorial_box { width: 50%; padding: 60px 90px 45px; } 
+.memorial_box { width: 50%; padding: 60px 34px 45px 90px; } 
 .memorial_box .m_list { } 
 .m_list ul { display: flex; } 
 .m_list ul li { padding: 0 10px; } 
@@ -141,8 +141,8 @@ dl > .pa { top: 8px; right: 190px; }
 .m_text { color: #fff; /* background-color: #000; */
  padding-top: 14px; } 
 .m_text h3 { font-size: 40px; font-weight: 300; color: #fff; } 
-.m_text > h3 > span { font-weight: 700; } /* 왜 안먹힐까.... */
-.m_text p { font-size: 16px; word-spacing: -2px; font-weight: 500; padding: 10px 0 10px 22px; line-height: 24px; } 
+.m_text > h3 > span { font-weight: 700; }
+.m_text p { font-size: 16px; word-spacing: -2px; font-weight: 500; padding: 10px 0 10px 22px; line-height: 24px; text-indent: 4px;} 
 .m_text > div { background-color: #124474; height: 48px; width: 138px; margin: 20px 0 0 20px; border-radius: 34px; } 
 .m_text > div > a { color: #ffffff; font-size: 16px; font-weight: 500; padding-left: 28px; line-height: 48px; } 
 .m_control .bar { width: 340px; height: 1px; box-sizing: border-box; border-bottom: 1px solid #fff; top: 48px; } 
@@ -152,18 +152,30 @@ dl > .pa { top: 8px; right: 190px; }
 /* section2 */
 #info{margin-top:80px;}
 .w50{width:50%}
-.dfitem{justify-content: ;}/* 확인요망 */
+/* .dfitem{justify-content: ;}확인요망 */
 #info>div{top:62px; left:326px; margin-bottom: 30px;}
 #info>div>h3{color: #124474; font-size:40px; font-weight:bold;}
 #info>div>h3>span{color: #124474; font-size:20px; font-weight:800; top:16px; right:-270px;}
 #info>div>div{width: 55px; height: 55px; background-color: #124474; border-radius: 50%; top:6px; right:-346px;}
 #info>div>div>img{height:30px; padding: 12px;}
 /* section2-article1 */
-.info_edu{margin-bottom:60px;background-color: lightgoldenrodyellow;}
+.info_edu{margin-bottom:60px;/* background-color: lightgoldenrodyellow; */}
 .edu_board{
-    padding:180px 0 0 0 ; 
-    background-color: rgb(223, 250, 223);}
-.edu_imgbox{background-color: rgb(187, 187, 187);}
+    padding:168px 0 0 0 ; 
+    }
+    .edu_board ul li{margin:20px 20px 10px 20px;padding:20px 20px 10px 20px; border-bottom:1px solid #444444;}
+    .edu_board ul>li>div{margin-top: 16px;}
+    .edu_board ul>li>div:first-child>span{font-size:16px; color:#444444; padding:6px 20px;
+        border:1px solid #cbcbcb; border-radius: 25px; margin:0 5px 5px 0;}
+        .edu_board ul>li h4{margin-bottom:10px;}
+        .edu_board ul>li h4 a{color:#444444; font-size: 22px; font-weight:600; word-spacing: -6px;}
+        .edu_board ul>li h4 a:hover{border-bottom:1px solid #444444;}
+    .edu_board ul>li>div:last-child>span{color:#444444; font-size: 16px; font-weight:100; word-spacing: -4px; padding:0 80px 0 20px;}
+    .edu_board ul>li>div:last-child>span::before{
+        content:''; display: block; position:absolute; width: 14px; height:12px; background: url(../images/ico-cal-gray.png) no-repeat; top:5px; left:0px;}
+        .edu_board ul>li>div:last-child>a{color:#ffffff; background-color: #81a5c9;font-weight:500; font-size: 18px; width: 150px; height:45px; display: block; border-radius: 25px; transform:translateY(-8px); text-align: center; line-height: 45px;}
+
+.edu_imgbox{}
 /*  */
 .edu_imgbox img{width: 544px; padding:20px 43px; vertical-align: center;}
 
