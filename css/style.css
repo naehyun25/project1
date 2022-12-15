@@ -126,7 +126,6 @@ dl > .pa { top: 8px; right: 190px; }
 .board_table > ul > li > ul > li>a>span:nth-child(2){color:#7c7c7c;}
 .board_table > ul > li:hover { border-bottom: 4px solid #124474;  } 
 /* 시각적으로는 after로선넣는것같음 */
-
 /* board_table */
 .board_table ul li ul { visibility: hidden; } 
 .board_table > ul > li:first-child ul { visibility: visible; } 
@@ -163,7 +162,7 @@ background: url(../images/ico-plus-blue.png) no-repeat;
  .m_text p {font-size:14px; font-weight: 550; padding:10px 0 10px 22px; line-height: 24px;}
 
  .m_text>div{background-color: #124474; height:54px; width:138px;
-    border-radius: 50% 20%;}
+    border-radius:;}
  .m_text>div>a{color:#ffffff; font-size: 16px; font-weight: 500; padding-left: 28px; line-height: 54px;}
  
 
