@@ -137,7 +137,7 @@ dl > .pa { top: 8px; right: 190px; }
 .m_list ul li a { font-size: 16px; color: #ffffff; font-weight: 500; } 
 /* .m_list::before { content: '●'; display: block; position:absolute; font-size: 12px; color:#fff; top:0px; right:0px } */
 .m_list ul li a:hover { border-bottom: 1px solid #ffffff; } 
-.m_list ul li a:hover::after { content: "●"; display: block; position: absolute; font-size: 6px; color: #fff; top: -16px; right: 24px; } 
+.m_list ul li a:hover::after { content: "●"; display: block; position: absolute; font-size: 6px; color: #fff; top: -16px; right: 50%; } 
 .m_text { color: #fff; /* background-color: #000; */
  padding-top: 14px; } 
 .m_text h3 { font-size: 40px; font-weight: 300; color: #fff; } 
@@ -152,6 +152,7 @@ dl > .pa { top: 8px; right: 190px; }
 /* section2 */
 #info{margin-top:80px;}
 .w50{width:50%}
+.dfitem{justify-content: space;}
 /* .dfitem{justify-content: ;}확인요망 */
 #info>div{top:62px; left:326px; margin-bottom: 30px;}
 #info>div>h3{color: #124474; font-size:40px; font-weight:bold;}
@@ -174,18 +175,27 @@ dl > .pa { top: 8px; right: 190px; }
     .edu_board ul>li>div:last-child>span::before{
         content:''; display: block; position:absolute; width: 14px; height:12px; background: url(../images/ico-cal-gray.png) no-repeat; top:5px; left:0px;}
         .edu_board ul>li>div:last-child>a{color:#ffffff; background-color: #81a5c9;font-weight:500; font-size: 18px; width: 150px; height:45px; display: block; border-radius: 25px; transform:translateY(-8px); text-align: center; line-height: 45px;}
-
-.edu_imgbox{}
-/*  */
-.edu_imgbox img{width: 544px; padding:20px 43px; vertical-align: center;}
-
+    .edu_imgbox img{width: 544px; padding:20px 43px;}
 /* section2-article2 */
-.info_event{margin-bottom:60px;background-color: rgb(245, 245, 150);}
-.event_img{background-color:lightgreen ;}
-.event_board{background-color: rgb(81, 236, 81);}
-.event_img img{width:605px;}
+.info_event{margin-bottom:60px;}
+.event_imgbox img{width:565px; border:20px solid #fff;}
+.text_area{margin-top:70px; letter-spacing: -1px;}
+    .text_area h4{font-size: 40px; color:#124474; margin-bottom:30px; font-weight:bold;     }
+    .text_area div p{/* width: 489px; */ font-size: 16px; color:#444444; font-weight: 400; padding-right: 80px;}
+    .text_area ul{margin-top:50px;}
+    .text_area ul li{margin:18px 0px 0px 30px;}
+    .text_area ul li::before{content: '●'; display: block; transform: translate(-18px, 26px); color:#124474;}
+    .text_area ul li a{display:block; font-size: 18px; letter-spacing:-1px; color:#124474; font-weight: 500; }
+    .text_area ul li:hover a{color:#2180dc; background:url(../images/arrow-blue.png) no-repeat;
+    background-position: -12px 20px;}
+    .text_area ul li:hover::before{color:#2180dc;}
+
+
+
+
+
 /* section2-article3 */
 .info_data{margin-bottom:60px;background-color: rgb(238, 238, 61);}
 .data_board{background-color:lightgreen ;}
 .data_imgbox{background-color:rgb(85, 219, 85) ;}
-.data_imgbox img{width: 605px;}
+.data_imgbox img{width: 605px; border:20px solid #fff;}
