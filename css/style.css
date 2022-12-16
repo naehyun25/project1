@@ -182,7 +182,7 @@ dl > .pa { top: 8px; right: -120px; }
 .event_imgbox img{width:565px; border:20px solid #fff;}
 
     .event_board .text_area h4{font-size: 40px; color:#124474; margin:70px 0 30px 0; font-weight:bold;}
-    .event_board .text_area div p{font-size: 16px; color:#444444; font-weight: 400; padding-right: 80px;}
+    .event_board .text_area div p{font-size: 16px; color:#444444; font-weight: 400; padding-right: 96px;}
     .event_board .text_area ul{margin-top:22px;}
     .event_board .text_area ul li{margin:18px 0px 0px 30px;}
     .event_board .text_area ul li::before{content: '●'; display: block; transform: translate(-18px, 26px); color:#124474; font-size: 12px;}
@@ -195,7 +195,7 @@ dl > .pa { top: 8px; right: -120px; }
 .info_data{margin-bottom:60px;}
 
     .data_board .text_area h4{font-size: 40px; color:#124474; margin-bottom:30px; font-weight:bold;}
-    .data_board .text_area div p{font-size: 16px; color:#444444; font-weight: 400; padding-right: 150px;}
+    .data_board .text_area div p{font-size: 16px; color:#444444; font-weight: 400; padding-right: 196px;}
     .data_board .text_area ul li{margin:18px 30px 0px 30px;}
     .data_board .text_area ul li::before{content: '●'; font-size: 12px; display: block; transform: translate(-18px, 26px); color:#124474;}
     .data_board .text_area ul li a{display:block; font-size: 20px; color:#124474; font-weight: 400; }
