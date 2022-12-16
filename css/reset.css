@@ -1,5 +1,5 @@
 @charset "utf-8";
-@import url("https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&family=Noto+Sans+KR:wght@300; 400; 500&display=swap");/* notosans */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");/* roboto */
 *{margin: 0; padding: 0;}
 a{text-decoration: none; color:#222}
@@ -7,7 +7,10 @@ a:hover{color:#000}
 html{font-size:62.5%; overflow-x:hidden; overflow-y:scroll;}
  /*1rem->10px */
 body, input, textarea, select, button, table{
-  font-family: "Noto Sans KR", sans-serif, "Roboto", AppleSDGothicNeo, sans-serif; color: #222; line-height: 1.75;}
+  font-family: "Noto Sans KR", sans-serif, "Roboto", AppleSDGothicNeo, sans-serif; color: #222; line-height: 1.75; font-weight: 400; font-size: 16px;}
+body{-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;}
+/* 글꼴 계단 현상완화 */
+body{letter-spacing: -1px;}
 em, address{font-style:normal;}
 dl,
 ul,
