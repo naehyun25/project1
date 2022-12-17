@@ -11,6 +11,7 @@ body, input, textarea, select, button, table{
 body{-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;}
 /* 글꼴 계단 현상완화 */
 body{letter-spacing: -1px;}
+body{box-sizing: border-box;}
 em, address{font-style:normal;}
 dl,
 ul,
