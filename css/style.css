@@ -259,3 +259,21 @@ aside{width: 100%; background-color: #124474; height:80px}
 .bottom_link{margin:auto;}
 .bottom_link ul{justify-content: space-around;}
 .bottom_link ul li a{color:#fff; font-size: 16px; font-weight: 500; line-height: 80px;}
+/* asidebar 끝 */
+footer.cover{padding:60px 0; background-color: #081d32;}
+.footer_top .link ul{padding: 10px 30px;}
+ .footer_top .link li{display:inline-block; text-align: center; margin-right:40px;}
+ .footer_top a{font-size: 14px; color:#fff; position: relative;}
+ .footer_top .link li:nth-child(n+2) a:before{content: '●'; display: block; color:#fff; font-size: 6px; position:absolute; top:2px; left:-22px;}
+
+ .share a:nth-child(n+2){width: 34px; height: 34px;}
+ .share a{display: inline-block; color:transparent; margin-right: 14px; background-size: contain;}
+ .wa{width: 63px; height: 41px; background: url(../images/ft-logo-wa.png) no-repeat ;}
+ .insta{background: url(../images/ft-ico-instagram.png)no-repeat;}
+ .facebook{background: url(../images/ft-ico-facebook.png)no-repeat;}
+ .kakao{background: url(../images/ft-btn-kakaostory.png)no-repeat;}
+ .twitter{background: url(../images/ft-ico-twitter.png)no-repeat;}
+ .blog{background: url(../images/ft-btn-naverblog.png)no-repeat;}
+ .footer_bottom{vertical-align: center; margin:30px 0px  50px 300px;}
+ .footer_bottom p{font-size: 13px; color:rgba(255, 255, 255, 0.5); margin: 0 auto;}
+ .footer_bottom span{margin-right: 30px;}
