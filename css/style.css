@@ -74,7 +74,8 @@ dl > .pa { top: 8px; right: -120px; }
 .info_text dd { color: #ffcc2f; font-size: 16px; font-weight: 400; width: 100%; margin: 0 0 0 120px; } 
 .info_text > dl:first-child > :nth-child(2) { color: #d4d4d4; } 
 .info_text .pr:first-child > :nth-child(3) { font-weight: 700; } 
-.intro_color1 { width: 1000px; height: 140px; background-color: #0d3255; top: 350px; left: -390px; } 
+.intro_color1 { width: 50vw; height: 160px; background-color: #0d3255; top: 484px; left: 0; } 
+.intro_color1 img{bottom:0;}
 .info_list ul { margin-top: 50px; } 
 .info_list ul li { display: inline-block; margin: 0 20px 10px 0; } 
 .info_list ul li a { padding: 10px 20px 10px 0; font-size: 16px; line-height: 16px; font-weight: 400; color: rgb(255, 255, 255, 0.7); } 
@@ -85,7 +86,8 @@ dl > .pa { top: 8px; right: -120px; }
 .swipper img { width: 10px; padding: 20px 0 0 12px; } 
 .banner_list ul { display: flex; flex-wrap: wrap; } 
 .banner_list ul li { width: 95px; height: 95px; margin: 5px auto; background-color: rgba(13, 13, 13, 0.534); border-radius: 20px; } 
-.color2 { width: 1044px; height: 1160px; background-color: #f4f8fb; top: 0px; left: 7px; z-index: -1; } 
+.color2 { width: 54vw; height: 1160px; background-color: #f4f8fb; top:0px; z-index: -1; } 
+.color2 img{left:0; top:0;}
 .banner_list ul li a { display: block; height: 28px; font-size: 14px; font-weight: 400; color: #ffffff; text-align: center; padding-top: 70%; line-height: 16px; } 
 .banner_list ul li div { width: 90px; height: 90px; } 
 .banner_list ul li .imgbox1 { background: url(../images/ico-place-white.png) no-repeat 50% 25%; } 
@@ -141,11 +143,11 @@ dl > .pa { top: 8px; right: -120px; }
 /* section2 */
 #info { margin-top: 80px; } 
 .w50 { width: 50%; } 
-#info > div { top: 62px; left: 326px; margin-bottom: 30px; } 
-#info > div > h3 { color: #124474; font-size: 40px; font-weight: bold; } 
-#info > div > h3 > span { color: #124474; font-size: 20px; font-weight: 800; top: 16px; right: -270px; } 
-#info > div > div { width: 55px; height: 55px; background-color: #124474; border-radius: 50%; top: 6px; right: -346px; } 
-#info > div > div > img { height: 30px; padding: 12px; } 
+#info > .inner> div { top: 78px; left: 24px; margin-bottom: 30px; } 
+#info > .inner> div > h3 { color: #124474; font-size: 40px; font-weight: bold; } 
+#info > .inner> div > h3 > span { color: #124474; font-size: 20px; font-weight: 800; top: 16px; right: -270px; } 
+#info > .inner> div > div { width: 55px; height: 55px; background-color: #124474; border-radius: 50%; top: 6px; right: -346px; } 
+#info >  .inner> div > div > img { height: 30px; padding: 12px; } 
 /* section3-article1 */
 .info_edu { margin-bottom: 60px; } 
 .edu_board { padding: 168px 0 0 0; } 
