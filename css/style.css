@@ -42,7 +42,7 @@ html { overflow-y: scroll; }
 .top ul li input + label::after { content: "▼"; position: absolute; top: 20%; right: -15%; font-size: 8px; } 
 .top ul li input:checked + label::after { content: "▲"; position: absolute; top: 20%; right: -15%; font-size: 8px; } 
 /* top-lang영역 */
-.lang_opt { z-index: 30; position: absolute; top: 120%; right: -50%; background-color: rgba(38, 37, 37, 0.832); } 
+.lang_opt { z-index: 30; top: 120%; right: -50%; background-color: rgba(38, 37, 37, 0.832); } 
 .lang_opt ul { display: flex; flex-direction: column; } 
 .top > ul > li > .lang_opt { display: none; } 
 .top > ul > li > input:checked ~ .lang_opt { display: block; } 
@@ -54,8 +54,9 @@ html { overflow-y: scroll; }
 .bottom nav { line-height: 50px; text-align: center; } 
 .bottom nav ul li { display: inline-block; padding: 0 8px; } 
 .bottom nav ul li a { color: #e8e8e8; font-weight: 700; font-size: 18px; padding: 15px 10px; } 
-.bottom .hamburger { position: absolute; top: 10px; right: 60px; } 
-.gnb_menu { display: none; overflow: hidden; transition: padding 0.5s linear; padding: 0 0; } /* transition을 못주겠음 */
+.bottom .all_menu {top: 16px; right: 60px; } 
+.all_menu button{font-size:0px; width:25px; background-color: transparent; cursor: pointer; } 
+.gnb_menu { display: none; overflow: hidden; transition: padding 0.5s linear; padding: 0 0; } 
 .gnb_menu ul { display: flex; align-items: flex-start; justify-content: space-around; } 
 .gnb .gnb_menu ul li dl { text-align: left; position: relative; } 
 .gnb_menu li dt { font-size: 18px; font-weight: 600; } 
@@ -65,8 +66,8 @@ html { overflow-y: scroll; }
 .gnb:hover .gnb_menu { display: block; padding: 10px 0; } 
 .gnb ul li dl::after { content: ""; display: block; background: #e7f4ff; position: absolute; height: 1px; width: 60%; top: 30px; left: 80px; } 
 .gnb ul li dl:hover::after { background: #124474; } 
-.gnb ul li dl dd::after { /* 위치가 안움직여요 */
- content: "●"; font-size: 8px; color: #124474; visibility: hidden; } 
+.gnb ul li dl dd::after { 
+ content: "●"; font-size: 8px; color: #2885dd; visibility: hidden; } 
 .gnb ul li dl dd:hover::after { visibility: visible; } 
 .gnb ul li dl dd:hover { text-decoration: underline blue; } 
 /* header 끝 */
@@ -177,19 +178,18 @@ dl > .pa { top: 8px; right: -120px; }
 .event_imgbox img { width: 565px; border: 20px solid #fff; } 
 .event_board .text_area h4 { font-size: 40px; color: #124474; margin: 70px 0 30px 0; font-weight: bold; } 
 .event_board .text_area div p { font-size: 16px; color: #444444; font-weight: 400; padding-right: 96px; } 
-.event_board .text_area ul { margin-top: 22px; } 
-.event_board .text_area ul li { margin: 18px 0px 0px 30px; } 
+.event_board .text_area ul {margin: 22px 0 0 14px; } 
 .event_board .text_area ul li::before { content: "●"; display: block; transform: translate(-18px, 26px); color: #124474; font-size: 12px; } 
-.event_board .text_area ul li a { display: block; font-size: 20px; color: #124474; font-weight: 400; } 
+.event_board .text_area ul li a { display: block; font-size: 20px; color: #124474; font-weight: 400; padding-bottom:20px} 
 .event_board .text_area ul li:hover a { color: #2180dc; background: url(../images/arrow-blue.png) no-repeat; background-position: -12px 20px; } 
 .event_board .text_area ul li:hover::before { color: #2180dc; } 
 /* section3-article3 */
 .info_data { margin-bottom: 60px; } 
 .data_board .text_area h4 { font-size: 40px; color: #124474; margin-bottom: 30px; font-weight: bold; } 
 .data_board .text_area div p { font-size: 16px; color: #444444; font-weight: 400; padding-right: 196px; } 
-.data_board .text_area ul li { margin: 18px 30px 0px 30px; } 
+.data_board .text_area ul{margin:18px 30px 0;}
 .data_board .text_area ul li::before { content: "●"; font-size: 12px; display: block; transform: translate(-18px, 26px); color: #124474; } 
-.data_board .text_area ul li a { display: block; font-size: 20px; color: #124474; font-weight: 400; } 
+.data_board .text_area ul li a { display: block; font-size: 20px; color: #124474; font-weight: 400; padding-bottom:18px;} 
 .data_board .text_area ul li:hover a { color: #2180dc; background: url(../images/arrow-blue.png) no-repeat; background-position: -12px 20px; } 
 .data_board .text_area ul li:hover::before { color: #2180dc; } 
 .data_imgbox img { width: 605px; border: 20px solid #fff; } 
