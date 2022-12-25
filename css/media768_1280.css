@@ -1,8 +1,16 @@
 @charset "UTF-8";
-@media screen and (max-width: 1280px){
-/* header top/ bottom gnb 사라짐 */
 html{overflow-x: hidden;
     overflow-y: scroll;}
+@media screen and (max-width: 1800px){
+    .intro_banner{
+        top:0px;
+        left:0px;}
+    .swipper{display: none;}
+    
+    }
+
+@media screen and (max-width: 1280px){
+/* header top/ bottom gnb 사라짐 */
 #header_top{display: none;}
 .gnb{display:none;}
 .gnb{background-color: black;}

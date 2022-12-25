@@ -330,14 +330,18 @@ html { overflow-y: scroll; }
   }
   .intro_banner {
     z-index: 10;
-    min-width: 1200px;
-    height: 720px;
+    max-width: 1750px;
+    max-height: 720px;
     top: 0;
     right: -100px;
   }
+  .intro_banner .banner_img{
+    width: 100%;
+  }
   .intro_banner .banner_img img{
-    width: 1200px;
-    z-index: 11;
+    width: 100%;
+    display: block;
+    height: auto;
   }
   
   
