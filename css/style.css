@@ -240,7 +240,10 @@ html { overflow-y: scroll; }
   } 
   .intro_text {
     color: #ffffff;
-    max-width: 1280px;
+    max-width: 1800px;
+  }
+  .intro_text>div:first-child{
+    width:100%
   }
   .intro .intro_text h2 {
     font-weight: 600;
@@ -260,10 +263,10 @@ html { overflow-y: scroll; }
     text-align: left;
     text-indent: 10px;
   }
-  .info_control {
+  .intro_text .info_control {
     border-bottom: 1px solid white;
     width: 280px;
-    margin: 70px 0 0 0px;
+    margin: 70px 0 20px 0px;
   }
   .autoplay {
     height: 10px;
@@ -282,14 +285,20 @@ html { overflow-y: scroll; }
     right: -120px;
   }
   dl > .pa {
-    top: 8px;
-    right: -120px;
+    top: 12%;
+    left: 0%;
+  }
+  .info_text{
+    padding:30px 0px;
+  }
+  .info_text dl:nth-child(2){
+    margin-top:24px;
   }
   .info_text dt {
     color: #ffffff;
     font-size: 24px;
     font-weight: bold;
-    margin: 40px 0 0 20px;
+    margin-left:20px;
   }
   .info_text dd {
     color: #ffcc2f;
@@ -308,18 +317,22 @@ html { overflow-y: scroll; }
     width: 50vw;
     height: 160px;
     background-color: #091f34;
-    top: 484px;
+    bottom: 114px;
     left: 0;
   }
   .intro_color1 img {
     bottom: 0;
   }
+  .info_list{
+    width:60%
+  }
   .info_list ul {
-    margin-top: 50px;
+    max-width: 100%;
+    padding: 40px 0px;
   }
   .info_list ul li {
     display: inline-block;
-    margin: 0 20px 10px 0;
+    margin: 0 10px 10px 0;
   }
   .info_list ul li a {
     padding: 10px 20px 10px 0;
@@ -331,7 +344,6 @@ html { overflow-y: scroll; }
   .intro_banner {
     z-index: 10;
     max-width: 1750px;
-    max-height: 720px;
     top: 0;
     right: -100px;
   }
@@ -361,7 +373,7 @@ html { overflow-y: scroll; }
   }
   .intro_banner .banner_list {
     top: 25%;
-    right: 3%;
+    left: 75%;
     z-index: 10;
     width: 224px;
     height: 340px;

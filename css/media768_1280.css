@@ -2,9 +2,41 @@
 html{overflow-x: hidden;
     overflow-y: scroll;}
 @media screen and (max-width: 1800px){
+    .intro_color1{
+        bottom:0;
+        left:0;
+        width:40vw;
+    }
+    .intro{
+        display: flex;
+        flex-direction: column-reverse;
+        align-content: center;
+        justify-content: space-between;
+    }
+    .intro_text div{
+        margin-left:10%
+    }
+    .info_text{
+        float: left;
+    }
+    .info_list{
+        float:right;
+    }
+    .info_list ul{
+        display: flex;
+        justify-content: space-around;
+        padding:56px 0 60px 0;
+        margin-top:64px;
+        background-color: #103d67;
+    }
+    dl > .pa {
+        left: 16%;
+    }
     .intro_banner{
         top:0px;
-        left:0px;}
+        left:0px;
+        position:relative;
+    }
     .swipper{display: none;}
     
     }
