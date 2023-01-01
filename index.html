@@ -44,9 +44,11 @@
     <title>독립기념관</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/media768_1280.css" >
+    <!-- <link rel="stylesheet" href="css/media768_1280.css" > -->
     <!-- media="screen and (max-width:1280px)" > -->
     <script src='https://code.jquery.com/jquery-1.12.0.min.js'></script>
+    <script src="js/index.js"></script>
+    <script src="js/script.js"></script>
   </head>
   <body>
     <a href="#banner" class="skip_menu">본문바로가기</a>
@@ -210,14 +212,21 @@
       <main id="container">
         <section id="intro" class="cover pr">
         <div class="intro_color1 pa"><img class="pa" src="images/info-bg.png" alt="#"></div>  
-          <div class="intro inner1700 pr">
+          <div class="intro inner1700 pr df">
             <div class="intro_text pr">
               <div>
                 <h2><span>불가능에 도전하여 가능을 창조한 독립정신</span><br>대한민국 독립기념관</h2>
                 <p>독립기념관은 위대한 대한민국을 함께 만들어 가고자 합니다.</p>
               </div>
-              <div class="info_control pr">
-                <button class="autoplay pa"></button>
+              <div>
+                <p>progress bar</p>
+                <p class="ctrl"><a href="#">play</a></p>
+                <ul class="info_control pr">
+                  <li class="autoplay on"><a href="#">btn1</a></li>
+                  <li class="autoplay"><a href="#">btn2</a></li>
+                  <li class="autoplay"><a href="#">btn3</a></li>
+                  <li class="autoplay"><a href="#">btn4</a></li>
+                </ul>
               </div>
               <div class="info_text">
                 <dl class="pr">
@@ -247,12 +256,23 @@
                 </ul>
               </div>
             </div>
-            <div class="intro_banner pa">
+            <div class="intro_banner pr">
               <div class="swipper pa">
-                <img src="images/ico-prev_swipper_left.png" alt="">
-                <img src="images/ico-prev_swipper_right.png" alt="">
+                <a href="#" class="prev">
+                  <img src="images/ico-prev_swipper_left.png" alt="">
+                </a>
+                <a href="#" class="next">
+                  <img src="images/ico-prev_swipper_right.png" alt="">
+                </a>
               </div>
-              <div class="banner_img"><img src="images/visual4.png" alt="배너"></div>
+              <div class="banner pr">
+                <ul class="banner_img pa">
+                  <li class="on"><img src="images/visual1.png"  alt="배너"></li>
+                  <li><img src="images/visual2.png" alt="배너"></li>
+                  <li><img src="images/visual3.png" alt="배너"></li>
+                  <li><img src="images/visual4.png" alt="배너"></li>
+                </ul>
+              </div>
               <div class="banner_list pa">
                 <ul>
                   <li>
@@ -286,8 +306,8 @@
               <h3>독립기념관은 지금 .</h3>
               <button class="board_bnt pa"></button>
               <div class="imgbox fl df">
-                <a href="#"><img src="images/kr_banner_0_1663301840.png" alt="재개관소식"></a>
-                <a href="#"><img src="images/kr_banner_0_1663301840.png" alt="재개관소식"></a>
+                <a href="#"><img src="images/nowimg01.gif" alt="재개관소식"></a>
+                <a href="#"><img src="images/nowimg02.gif" alt="신년사"></a>
               </div>
               <div class="board_table fr">
                 <ul class="pr cf">
@@ -641,6 +661,6 @@
       </footer>
       <!-- //footer 영역끝 -->
     </div>
-    <script src="js/script.js"></script>
   </body>
 </html>
+
