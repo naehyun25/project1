@@ -1,6 +1,6 @@
 $(function(){
 
-    
+
 //메인배너영역
 const bSlides=$(".banner_img"); //이미지전체
 const bSlide=$(".banner_img li"); //이미지한개
@@ -99,7 +99,23 @@ $(".swipper .prev").click(function(){
     return false;
 })//메인배너영역
 
+//board_table_tabmenu
+const menus = $(".board_table>ul>li>a")
+const pannels = $(".board_table>ul>li>ul")
+console.log(menus , pannels)
 
+menus.click(function(board){
+    board.preventDefault();
+    let tg=$(this);
+    let currentLink=tg.attr("href");
 
+    pannels.hide();
+    $(currentLink).show();
+    //menus.removeClass(active)//hover이미준상태
+})
+    pannels.eq(0).show()
+    console.log(panels.eq(0))
 
 })//jQuery
+
+
