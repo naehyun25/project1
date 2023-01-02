@@ -264,28 +264,35 @@ html { overflow-y: scroll; }
     text-indent: 10px;
   }
   .info_control {
-    border-bottom: 1px solid white;
     width: 450px;
     margin-top: 70px;
     display: flex;
     justify-content: space-between;
   }
   .info_control li{
-    background: url(../images/circle.png) no-repeat 0px -3px;
+    width:1.3em;
+    height: 1.3em;
+    background: url(../images/white_circle.png) no-repeat 0px 1px;
     background-size: cover;
   }
   .info_control li.on{
-    background:url(../images/circle.png) no-repeat 0px -46px;
+    width:1.3em;
+    height:1.3em;
+    background:url(../images/white_circle.png) no-repeat 0px -23px;
     background-size:cover;
   }
-  .ctrl
-  .autoplay {
-    height: 5px;
-    width: 5px;
-    background-size: contain;
-    background: url(../images/ico-stop.png) no-repeat;
-    display: inline-block;
+  .ctrlB{
+    width:1.3em;
+    height:1.3em;
+    background:url(../images/white_play_pause.png) no-repeat 0px -29px;
+    background-size:cover;
+    color:transparent;
   }
+  .intro_text .playB{background:url(../images/white_play_pause.png) no-repeat 0px 1px;
+    background-size:cover;
+    }
+  
+
   
   dl > .pa {
     top: 12%;
@@ -359,7 +366,7 @@ html { overflow-y: scroll; }
     
   }
   .banner_img{
-    width: 1275px;
+    width: 5100px;
     height: 100%;
     display: flex;
 }
@@ -368,9 +375,8 @@ html { overflow-y: scroll; }
   .banner_img li{
     position:relative;
     opacity:1;
-    width:100%;
+    width:1275px;
     height:100%;
-    /* z-index: 10; */
     display:block;
   }
 
@@ -389,7 +395,7 @@ html { overflow-y: scroll; }
     box-shadow: #d4d4d4 2px -1px 3px;
     z-index:11;
   }
-  .swipper a{padding:10px 0px;}
+  .swipper a{padding:20px 0px;}
   .swipper img {
     width: 10px;
     padding: 20px 0 0 12px;
