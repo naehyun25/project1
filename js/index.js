@@ -36,7 +36,7 @@ slide.append(copy)
             {btnIndex=0; slide.css("margin-left",0)}
             slide.stop().animate({"margin-left":-slideWidth*btnIndex},200)
         }
-    clearInterval(play)
+    //clearInterval(play)
 
 //play , stop 버튼    <<---여기부터 손보기----->> 
     ctrl.click(function(){
@@ -44,7 +44,6 @@ slide.append(copy)
           ctrl.text("play"); clearInterval(play)
         }else{ctrl.text("stop"); setInterval(auto, 3000)
         }
-        console.log(ctrl.text()==="stop");
       })
 
 //버튼 누르면 해당 이미지 슬라이드로 넘어감    
