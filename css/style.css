@@ -419,19 +419,21 @@ dl > .pa {
   overflow: hidden;
 }
 .banner_img {
-  width: 5100px;
+  width: 100%;
   height: 100%;
-  display: flex;
 }
 
 .banner_img li {
-  position: relative;
-  opacity: 1;
+  position: absolute;
   width: 1275px;
   height: 100%;
   display: block;
 }
-
+.b-img1{left:0%}
+.b-img2{left:100%}
+.b-img3{left:200%}
+.b-img4{left:300%}
+/*  */
 .swipper {
   width: 60px;
   height: 60px;
@@ -540,6 +542,9 @@ dl > .pa {
 .board_banner .imgbox img {
   width: 300px;
   margin-right: 20px;
+}
+.ctrlN{
+  color:
 }
 .board_bnt {
   background: url(../images/ico-stop-blue.png) no-repeat;
@@ -1059,12 +1064,12 @@ dl > .pa {
   justify-content: space-between;
   padding-top: 20px;
 }
-.imgbox ul li {
+.service_imgbox ul li {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
 }
-.imgbox ul li .whitebox {
+.service_imgbox ul li .whitebox {
   width: 60px;
   height: 60px;
   border-radius: 50%;
@@ -1074,7 +1079,7 @@ dl > .pa {
   width: 27px;
   padding: 16.5px;
 }
-.imgbox ul li div a {
+.service_imgbox ul li div a {
   font-size: 16px;
   font-weight: 300;
   color: #ffffff;
@@ -1086,7 +1091,7 @@ dl > .pa {
   width: 195px;
   padding-right: 10px;
 }
-.left_bottom .imgbox img {
+.left_bottom .service_imgbox img {
   width: 136px;
 }
 .event_center {
@@ -1113,7 +1118,7 @@ dl > .pa {
 .ctrbox {
   color: #fff;
 }
-.imgbox .ctrbox::after {
+.service_imgbox .ctrbox::after {
   content: "◎○○";
   display: block;
   position: absolute;
@@ -1147,7 +1152,7 @@ dl > .pa {
 .event_right > .textbox p {
   font-weight: 500;
 }
-.event_right .imgbox {
+.event_right .service_imgbox {
   text-align: center;
 }
 .event_right img {
