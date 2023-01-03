@@ -1,71 +1,36 @@
-div.banner {
-  width: 1275px;
-  height: 720px;
-  overflow: hidden;
-}
-ul.banner_img {
+.board_banner {
   width: 100%;
-  height: 100%;
 }
 
-.banner_img li {
-  position: absolute;
-  width: 1275px;
-  height: 100%;
+.board_imgbox {
+  width: 60%;
+  padding-top: 20px;
+  /* overflow:hidden */
+}
+
+.board_imgs li a{
   display: block;
 }
-.b-img1{left:0%}
-.b-img2{left:100%}
-.b-img3{left:200%}
-.b-img4{left:300%}
-.info_control {
-  width: 450px;
-  margin-top: 70px;
-  display: flex;
-  justify-content: space-between;
+
+.board_imgs li img {
+  width: 300px;
+  margin-right: 20px;
 }
-.info_control li {
-  width: 1.3em;
-  height: 1.3em;
-  background: url(../images/white_circle.png) no-repeat 0px 1px;
-  background-size: cover;
-  background-color: black;
+.ctrlN {
+  color:white;/* transparent 로 변경예정 */
+  background: black;
 }
-.info_control li.on {
-  width: 1.3em;
-  height: 1.3em;
-  background: url(../images/white_circle.png) no-repeat 0px -23px;
+
+.board_bnt {
+  background: url(../images/ico-stop-blue.png) no-repeat;
   background-size: cover;
-  background-color: black;
+  width: 15px;
+  top: 15px;
+  left: 630px;
+  height: 10px;
 }
 
 
-.ctrlB {
-  width: 1.3em;
-  height: 1.3em;
-  background: url(images/white_play_pause.png) no-repeat 0px -29px;
-  background-size: cover;
-  /* color: transparent; */
-}
-.intro_text .playB {
-  background: url(images/white_play_pause.png) no-repeat 0px 1px;
-  background-size: cover;
-}
-.swipper {
-  width: 60px;
-  height: 60px;
-  background-color: #1e90e4;
-  border-radius: 50%;
-  top: 300px;
-  left: -30px;
-  box-sizing: border-box;
-  box-shadow: #d4d4d4 2px -1px 3px;
-  z-index: 11;
-}
-.swipper a {
-  padding: 20px 0px;
-}
-.swipper img {
-  width: 10px;
-  padding: 20px 0 0 12px;
-}
+
+
+

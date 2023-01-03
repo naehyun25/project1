@@ -1,20 +1,20 @@
 $(function () {
-//메인배너영역
+
   const bSlide=$(".banner_img li") //이미지
-  const bBtn=$(".info_control li") //이미지
+  const bBtn=$(".info_control li") //버튼
   const speed=3000;
   let current =0;//현재
   let bBtnIdx=0;//초기버튼인덱스
   let id;
 
 //버튼클릭
-    bBtn.click(function(){
-        bBtnIdx=$(this).index();
+bBtn.click(function(){
+    bBtnIdx=$(this).index();
     bBtn.removeClass("on");
     $(this).addClass("on");
     bMove(bBtnIdx);
-      })
-    
+})
+
 //이동함수
     function bMove(){
     if(current==bBtnIdx) return;
@@ -28,7 +28,7 @@ $(function () {
 //시간마다실행
     bTimer();
     function bTimer(){
-      id = setInterval(function(){
+   id = setInterval(function(){
         let next=current+1;
         if(next==bSlide.length){
           next=0;
@@ -36,7 +36,7 @@ $(function () {
         bBtn.eq(next).trigger("click");
       },speed);
     }
-
+    
 //clearInterval
     bclearTimer();
     function bclearTimer(){
@@ -46,23 +46,23 @@ $(function () {
       $(".swipper,.info_control li").mouseleave(function () {
         bTimer();
     })
-    }
+}
 
-  //play,pause 컨트롤
-  Bcontrol();
+//play,pause 컨트롤
+Bcontrol();
   function Bcontrol() {
     $(".ctrlB").click(function () {
       if ($(".ctrlB").text() == "play") {
         $(".ctrlB").text("pause");
-        $(".ctrlB").addClass("playB"), clearInterval(id);
+        $(".ctrlB").addClass("playB") , clearInterval(id);
       } else {
         $(".ctrlB").text("play");
-        $(".ctrlB").removeClass("playB"), bTimer();
+        $(".ctrlB").removeClass("playB") , bTimer();
       }
     });
-  }
+}
 
-  //좌우 컨트롤
+//좌우 컨트롤
   $(".swipper .next").click(function () {
     bBtnIdx=bBtnIdx+1;
     if (bBtnIdx == bSlide.length) {
@@ -78,11 +78,11 @@ $(function () {
     console.log(current,bBtnIdx)
     return false;
   });
-  $(".swipper .prev").click(function(){
-    bBtnIdx=bBtnIdx-1;
-    if(current==0){
-      bBtnIdx=bSlide.length-1;
-    }
+$(".swipper .prev").click(function(){
+        bBtnIdx=bBtnIdx-1;
+        if(current==0){
+            bBtnIdx=bSlide.length-1;
+          }
     bBtn.removeClass("on");
     bBtn.eq(bBtnIdx).addClass("on");
     let cu = bSlide.eq(current)
@@ -91,27 +91,65 @@ $(function () {
     ne.css("left","-100%").stop().animate({left:0},500);
     current=bBtnIdx;
     return false;
-  });
-   //메인배너영역
-  console.log(current,bBtnIdx)
+  });   
+//메인배너영역
 
-  //노티스보드배너영역//
-  const nSlides=$(".imgbox");//비쥬얼
-  const nSlide=$(".imgbox li");//이미지한개
-  const nTotalnum=nSlide.length;//이미지갯수
-  const nWidth=nSlide.eq(0).width;//한개이미지너비
-  const nbtn=$(".board_bnt li");//버튼
+
+
+  const nSlides=$(".board_imgs");//비쥬얼
+  const nSlide=$(".board_imgs>li");//이미지한개
+  const nTotalnum=nSlide.length;//이미지갯수(2)
+  const nWidth=nSlide.eq(0).width();//한개이미지너비
+  const nBtn=$(".board_btn li");//버튼
   const ctrlN=$(".ctrlN")//컨트롤버튼
-  let nbtnIndex=0;
+  let nBtnIndex=0;//초기버튼번호
+  let now=0;//초기번호
+  let nspeed=5000;
 
   //복사본
-  let nCopy=nSlide.clone().css("opacity",0.5);
+  let nCopy=nSlide.clone();
   nSlides.append(nCopy);
   
+  //auto
+  function nOuto(){
+    if(now==nTotalnum){
+        now=0;
+        nSlides.css("margin-left",0)
+    }
+    now++
+    nSlides.stop().animate({"margin-left":-nWidth*now},1000)
+    console.log(now, nTotalnum, nBtnIndex,nWidth)
+  }
+  const nOutoplay =setInterval(nOuto,nspeed);
+  //clearInterval(nOutoplay)
 
-
-
-
+  //버튼클릭
+  nBtn.click(function(){
+    nBtnIndex=$(this).index();
+    nBtn.removeClass("bon");
+    $(this).addClass("bon");
+    nMove(nBtnIndex);
+  })
+  //버튼클릭이동
+  function nMove(){
+    if(now==nBtnIndex) return;
+    nSlides.stop().animate({ "margin-left": -nWidth*nBtnIndex}, 1000);
+    console.log(nBtnIndex)
+    now=nBtnIndex;
+  }
+ //play,pause 컨트롤
+    ncontrol();
+    function ncontrol() {
+        ctrlN.click(function () {
+        if (ctrlN.text() == "play") {
+            ctrlN.text("pause");
+            ctrlN.addClass("playN") , clearInterval(nOutoplay);
+        } else {
+            ctrlN.text("play");
+            ctrlN.removeClass("playN") , setInterval(nOuto,nspeed);
+        }
+      });
+    }//노티스보드배너영역
 
 
 

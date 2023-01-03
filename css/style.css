@@ -532,37 +532,57 @@ dl > .pa {
 .board_banner {
   width: 100%;
 }
-.board_banner .imgbox {
-  width: 60%;
+
+.board_imgbox {
+  width: 52%;
+  margin-left:20px;
   padding-top: 20px;
+  overflow:hidden
 }
-.board_banner .imgbox a {
+.board_imgs li{
+  margin-right:13px;
+}
+
+.board_imgs li a{
   display: block;
 }
-.board_banner .imgbox img {
+
+.board_imgs li img {
   width: 300px;
   margin-right: 20px;
 }
-.ctrlN{
-  color:
+.ctrlN {
+  color:transparent;
+  background:url(../images/blue_play_pause.png) 0px 2px no-repeat;
+  background-size: 22px;
 }
-.board_bnt {
-  background: url(../images/ico-stop-blue.png) no-repeat;
-  background-size: contain;
+.playN{
+  color:transparent;
+  background:url(../images/blue_play_pause.png) 2px -16px no-repeat;
+  background-size: 16px;
+}
+  
+.board_btn {
   width: 15px;
   top: 15px;
   left: 630px;
   height: 10px;
 }
-.board_bnt::after {
-  content: "◎";
-  color: #1e90e4;
-  font-size: 15px;
-  display: block;
-  position: absolute;
-  top: -10px;
-  right: -30px;
+
+.board_btn li{
+  padding:10px;
+  color:transparent;
+  background: url(../images/blue_circle.png) 
+  0px 2px no-repeat;
+  background-size: 22px;
 }
+
+.board_btn li.bon{
+  padding:10px;
+  background: url(../images/blue_circle.png)0px -18px no-repeat;
+  background-size: 20px;
+}
+
 .board_table {
   width: 40%;
   transform: translateY(-62px);
@@ -615,34 +635,6 @@ dl > .pa {
 .board_table ul li ul {
   display: none; }
 
-/* .board_table > ul > li:first-child ul { */
-  /* visibility: visible; */
-/* } */
-/* .board_table > ul > li:hover > a { */
-  /* font-weight: 700; */
-/* }  */
-/* .board_table > ul > li:hover ul { */
-  /* visibility: visible; */
-  /* position: fixed; */
-  /* z-index: 101; */
-  /* background-color: #fff; */
-/* } */
-/* .board_table > ul > li:nth-child(n + 2):hover:first-child ul { */
-  /* visibility: hidden; */
-/* } */
-/* .board_table > ul > li > ul > li:hover > a > span:nth-child(1) { */
-  /* text-decoration: underline; */
-/* } */
-/* .board_table > ul > li:last-child::after { */
-  /* content: ""; */
-  /* display: block; */
-  /* position: absolute; */
-  /* height: 21px; */
-  /* width: 21px; */
-  /* top: 26px; */
-  /* right: 18px; */
-  /* background: url(../images/ico-plus-blue.png) no-repeat; */
-/* } */
  .memorial_board { 
   height: 440px;
   background-color: #2180dc;

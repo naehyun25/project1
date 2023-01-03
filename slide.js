@@ -1,88 +1,79 @@
-$(function(){
-const bSlide=$(".banner_img li") //이미지
-const bBtn=$(".info_control li") //이미지
-const speed=3000;
-let current =0;//현재
-let bBtnIdx=0;//초기버튼인덱스
-let id;
+$(function () {
+  //변수
+  let
+    list = $("#banner"),
+    num = 0;
+  const
+    show_num = 3,
+    total = list.find("li").length,
+    li_width = list.find("li").eq(0).width(),
+    copyObj = list.find("li").clone(),
+    ctrl = $(".ctrl");
 
-//버튼클릭
-bBtn.click(function(){
-  bBtnIdx=$(this).index();
-  bBtn.removeClass("on");
-  $(this).addClass("on");
-  bMove(bBtnIdx);
-})
+  list.append(copyObj)
 
-//이동함수
-function bMove(){
-  if(current==bBtnIdx) return;
-  let cu = bSlide.eq(current)
-  cu.css("left",0).stop().animate({left:"-100%"},1000);
-  let ne = bSlide.eq(bBtnIdx)
-  ne.css("left","100%").stop().animate({left:0},1000);
-  current=bBtnIdx;
-}
 
-//시간마다실행
-bTimer();
-function bTimer(){
-  id = setInterval(function(){
-    let next=current+1;
-    if(next==bSlide.length){
-      next=0;
+
+
+  const timer = setInterval(autoplay, 2000)
+
+  
+  ctrl.click(function () {
+    if (ctrl.text() === "stop") {
+      ctrl.text("play"); 
+      clearInterval(timer)
+    } else
+      {
+        ctrl.text("stop"); 
+        setInterval(autoplay, 2000)
+      }
+  })
+
+
+  function autoplay() {
+    if (num == total) {
+      num = 0;
+      list.css("margin-left", 0)
     }
-    bBtn.eq(next).trigger("click");
-  },speed);
-}
+    num++;
+    list.stop().animate({ "margin-left": -li_width * num }, 1000);
+  }
 
-//clearInterval
-bclearTimer();
-function bclearTimer(){
-  $(".swipper,.info_control li").mouseenter(function () {
-    clearInterval(id);
+
+  $('.next').click(function () {
+    if (num == total) {
+      num = 0;  //0
+      list.css("margin-left", 0)
+    }
+    num++;  //요기의 num 0
+    list.stop().animate({ "margin-left": -li_width * num }, 1000);//요기의num
+    return false;
   });
-  $(".swipper,.info_control li").mouseleave(function () {
-    bTimer();
-})
-}
-
-//좌우컨트롤
-bControls;
-function bControls(){
-  $(".swipper .next").click(function(){
-    bBtnIdx=bBtnIdx+1;
-    console.log(bBtnIdx)
-    if(bBtnIdx==bSlide.length){
-      bBtnIdx=0;
+  $(".prev").click(function () {
+    if (num == 0) {
+      num = total;//3
+      list.css("margin-left", -li_width * num)
     }
-    bBtn.removeClass("on");
-    bBtn.eq(bBtnIdx).addClass("on");
-    let cu = bSlide.eq(current)
-    console.log(cu)
-    let ne = bSlide.eq(bBtnIdx)
-    cu.css("left",0).stop().animate({left:"-100%"},1000);
-    ne.css("left","100%").stop().animate({left:0},1000);
-    current=bBtnIdx;
+    num--;
+    list.stop().animate({ "margin-left": -li_width * num }, 500);
     return false;
   })
-  $(".swipper .prev").click(function(){
-    bBtnIdx=bBtnIdx-1;
-    if(current==0){
-      bBtnIdx=bSlide.length;
-    }
-    bBtn.removeClass("on");
-    bBtn.eq(bBtnIdx).addClass("on");
-    let cu = bSlide.eq(current)
-    let ne = bSlide.eq(bBtnIdx)
-    cu.css("left",0).stop().animate({left:"100%"},1000);
-    ne.css("left","-100%").stop().animate({left:0},1000);
-    current=bBtnIdx;
-    return false;
-  })
-
-}
-
-
-
 })
+</script>
+</head>
+
+<body>
+<h1>Rolling</h1>
+<div id="frame">
+<ul id="banner">
+  <li>1</li>
+  <li>2</li>
+  <li>3</li>
+</ul>
+</div>
+<a href="#" class="prev">prev</a>
+<a href="#" class="next">next</a>
+<a href="#" class="ctrl">stop</a>
+</body>
+
+</html>
