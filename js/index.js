@@ -1,5 +1,5 @@
 $(function () {
-
+//SLIDEs    
   const bSlide=$(".banner_img li") //이미지
   const bBtn=$(".info_control li") //버튼
   const speed=3000;
@@ -7,15 +7,15 @@ $(function () {
   let bBtnIdx=0;//초기버튼인덱스
   let id;
 
-//버튼클릭
-bBtn.click(function(){
+ //버튼클릭
+ bBtn.click(function(){
     bBtnIdx=$(this).index();
     bBtn.removeClass("on");
     $(this).addClass("on");
     bMove(bBtnIdx);
 })
 
-//이동함수
+ //이동함수
     function bMove(){
     if(current==bBtnIdx) return;
     let cu = bSlide.eq(current)
@@ -25,7 +25,7 @@ bBtn.click(function(){
     current=bBtnIdx;
     }
 
-//시간마다실행
+ //시간마다실행
     bTimer();
     function bTimer(){
    id = setInterval(function(){
@@ -37,7 +37,7 @@ bBtn.click(function(){
       },speed);
     }
     
-//clearInterval
+ //clearInterval
     bclearTimer();
     function bclearTimer(){
       $(".swipper,.info_control li").mouseenter(function () {
@@ -48,8 +48,8 @@ bBtn.click(function(){
     })
 }
 
-//play,pause 컨트롤
-Bcontrol();
+ //play,pause 컨트롤
+ Bcontrol();
   function Bcontrol() {
     $(".ctrlB").click(function () {
       if ($(".ctrlB").text() == "play") {
@@ -62,7 +62,7 @@ Bcontrol();
     });
 }
 
-//좌우 컨트롤
+ //좌우 컨트롤
   $(".swipper .next").click(function () {
     bBtnIdx=bBtnIdx+1;
     if (bBtnIdx == bSlide.length) {
@@ -75,10 +75,9 @@ Bcontrol();
     cu.css("left",0).stop().animate({left:"-100%"},500);
     ne.css("left","100%").stop().animate({left:0},500);
     current = bBtnIdx;
-    console.log(current,bBtnIdx)
     return false;
   });
-$(".swipper .prev").click(function(){
+  $(".swipper .prev").click(function(){
         bBtnIdx=bBtnIdx-1;
         if(current==0){
             bBtnIdx=bSlide.length-1;
@@ -92,7 +91,7 @@ $(".swipper .prev").click(function(){
     current=bBtnIdx;
     return false;
   });   
-//메인배너영역
+ //메인배너영역
 
 
 
@@ -118,7 +117,6 @@ $(".swipper .prev").click(function(){
     }
     now++
     nSlides.stop().animate({"margin-left":-nWidth*now},1000)
-    console.log(now, nTotalnum, nBtnIndex,nWidth)
   }
   const nOutoplay =setInterval(nOuto,nspeed);
   //clearInterval(nOutoplay)
@@ -134,7 +132,6 @@ $(".swipper .prev").click(function(){
   function nMove(){
     if(now==nBtnIndex) return;
     nSlides.stop().animate({ "margin-left": -nWidth*nBtnIndex}, 1000);
-    console.log(nBtnIndex)
     now=nBtnIndex;
   }
  //play,pause 컨트롤
@@ -150,6 +147,47 @@ $(".swipper .prev").click(function(){
         }
       });
     }//노티스보드배너영역
+    const mVisual = $(".memorial_img>li");
+    const mBtn = $(".m_control ul li");
+    let mBtnIndex=0;
+    let mCurrent=0;
+    let mSpped=3000;
+    let mId; // setinterval
+
+    mTimer();
+    function mTimer(){
+    mId = setInterval(function(){
+            let mNext=mCurrent+1;
+            if(mNext==mVisual.length)
+            {mNext=0};
+            mBtn.eq(mNext).trigger("click")
+            console.log(mVisual.length)
+        },mSpped)
+    }
+
+
+    mBtn.click(function(){
+        mBtnIndex = $(this).index();
+        mBtn.removeClass("mon");
+        $(this).addClass("mon");
+        mMove(mBtnIndex);
+        console.log("인덱스"+mBtnIndex)
+    })
+
+   
+    function mMove(){
+        console.log(mCurrent, mBtnIndex)
+        if(mCurrent==mBtnIndex) return;
+        let cu=mVisual.eq(mCurrent)
+        let ne=mVisual.eq(mBtnIndex)
+        cu.css("left",0).stop().animate({left:"-100%"},2000);
+        ne.css("left","100%").stop().animate({left:0},2000);
+        mCurrent=mBtnIndex;
+    }
+
+
+
+ 
 
 
 
@@ -157,11 +195,11 @@ $(".swipper .prev").click(function(){
 
 
 
-  //board_table_tabmenu
+
+
+//TAB
   const menus = $(".board_table>ul>li>a");
   const pannels = $(".board_table>ul>li>ul");
-  console.log(menus, pannels);
-
   menus.click(function (board) {
     board.preventDefault();
     let tg = $(this);
@@ -171,5 +209,36 @@ $(".swipper .prev").click(function(){
     $(currentLink).show();
     //menus.removeClass(active)//hover이미준상태
   });
-  pannels.eq(0).show();
+  pannels.eq(0).show();//board tabmenu
+
+  const meMenus=$(".m_list ul li a");
+  const mePannels=$(".m_texts>div");
+  meMenus.click(function(m){
+    m.preventDefault();
+    let mTg=$(this);
+    let mCurrentLink = mTg.attr("href");
+    meMenus.removeClass('mactive');
+    mTg.addClass('mactive');
+    mePannels.hide();
+    $(mCurrentLink).show();
+  })
+  meMenus.eq(0).addClass('mactive')
+  mePannels.hide();
+  mePannels.eq(0).show();//memorial tabmenu
+
+
+$(".m_list ul li a").hover(
+    function(){$(this).addClass('mactive');}   
+    )
+//memorial hover// 다시해야함
+
+
+
+
+
+
+
+
+
+
 }); //jQuery

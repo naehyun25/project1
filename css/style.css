@@ -641,7 +641,8 @@ dl > .pa {
 }
 .memorial_box {
   width: 50%;
-  padding: 60px 34px 45px 90px;
+  padding: 60px 34px 45px 66px;
+  flex:0 0 40%;
 }
 .m_list ul {
   display: flex;
@@ -653,11 +654,16 @@ dl > .pa {
   font-size: 16px;
   color: #ffffff;
   font-weight: 400;
+  padding:4px 0px;
 }
-.m_list ul li a:hover {
+/* .m_list ul li a:hover {
   border-bottom: 1px solid #ffffff;
-}
-.m_list ul li a:hover::after {
+  border-bottom: 1px solid #ffffff;
+  border-top:6px solid #ffffff;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+} */
+/* .m_list ul li a:hover::after {
   content: "●";
   display: block;
   position: absolute;
@@ -665,10 +671,17 @@ dl > .pa {
   color: #fff;
   top: -16px;
   right: 50%;
+} */
+.mactive{
+  border-bottom: 1px solid #ffffff;
+  border-top:6px solid #ffffff;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
 }
 .m_text {
   color: #fff;
   padding-top: 14px;
+  position:absolute;
 }
 .m_text h3 {
   font-size: 40px;
@@ -700,36 +713,66 @@ dl > .pa {
   padding-left: 28px;
   line-height: 48px;
 }
+.m_control {
+  top:260px;
+}
+
 .m_control .bar {
   width: 340px;
   height: 1px;
   box-sizing: border-box;
   border-bottom: 1px solid #fff;
-  top: 48px;
+  top: 0px;
 }
-.m_control img {
-  top: -6px;
-  right: -32px;
-  height: 12px;
+.ctrlM {
+  position:absolute;
+  width:20px;
+  height: 20px;
+  top:-12px;
+  left:360px;
+  background: url(../images/white_play_pause.png) no-repeat 0px -28px;
+  background-size:24px ;
 }
-.bar::after {
-  content: "◎";
-  display: block;
+.m_control p.playM{
+  background: url(../images/white_play_pause.png) no-repeat 0px 0px;
+  background-size: 20px;
+}
+
+.m_control ul{
+  display: flex;
+  justify-content: flex-start;
+  left:400px;
+  top:-20px;
+  position:relative;
+}
+.m_control ul li{
+  background:url(../images/white_circle.png)
+  no-repeat 0px 6px;
+  background-size: 22px;
+}
+.m_control ul li.mon{
+  background:url(../images/white_circle.png)
+  no-repeat 0px -18px;
+  background-size: 20px;
+}
+
+
+.memorial_img{
+  width: 702px;
+  position: relative;
+  overflow:hidden
+}
+.memorial_img li{
   position: absolute;
-  font-size: 16px;
-  color: #fff;
-  top: -14px;
-  right: -96px;
 }
-.bar::before {
-  content: "◎";
-  display: block;
-  position: absolute;
-  font-size: 16px;
-  color: #fff;
-  top: -14px;
-  right: -64px;
+.mimg1{
+  left:0%;
 }
+.mimg2{
+  left:100%;
+}
+
+
 /* section2 */
 #info {
   margin-top: 80px;
