@@ -551,12 +551,12 @@ dl > .pa {
   width: 300px;
   margin-right: 20px;
 }
-.ctrlN {
+.board_banner .playN {
   color:transparent;
   background:url(../images/blue_play_pause.png) 0px 2px no-repeat;
   background-size: 22px;
 }
-.playN{
+.ctrlN{
   color:transparent;
   background:url(../images/blue_play_pause.png) 2px -16px no-repeat;
   background-size: 16px;

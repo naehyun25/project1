@@ -90,10 +90,7 @@ $(function () {
     ne.css("left","-100%").stop().animate({left:0},500);
     current=bBtnIdx;
     return false;
-  });   
- //메인배너영역
-
-
+  });//메인배너영역
 
   const nSlides=$(".board_imgs");//비쥬얼
   const nSlide=$(".board_imgs>li");//이미지한개
@@ -103,50 +100,66 @@ $(function () {
   const ctrlN=$(".ctrlN")//컨트롤버튼
   let nBtnIndex=0;//초기버튼번호
   let now=0;//초기번호
-  let nspeed=5000;
+  let nspeed=3000;
 
   //복사본
   let nCopy=nSlide.clone();
   nSlides.append(nCopy);
   
-  //auto
+    //auto
   function nOuto(){
     if(now==nTotalnum){
         now=0;
         nSlides.css("margin-left",0)
     }
     now++
-    nSlides.stop().animate({"margin-left":-nWidth*now},1000)
-  }
-  const nOutoplay =setInterval(nOuto,nspeed);
+    if(now>=nBtn.length){nBtnIndex=0;
+    }else{nBtnIndex=now;
+    }nSlides.stop().animate({"margin-left":-nWidth*now},1000)
+    nBtn.removeClass("bon");
+    nBtn.eq(nBtnIndex).addClass("bon");
+  };
+    let nOutoplay =setInterval(nOuto,nspeed);
   //clearInterval(nOutoplay)
-
+  
   //버튼클릭
   nBtn.click(function(){
     nBtnIndex=$(this).index();
     nBtn.removeClass("bon");
     $(this).addClass("bon");
-    nMove(nBtnIndex);
-  })
-  //버튼클릭이동
-  function nMove(){
-    if(now==nBtnIndex) return;
     nSlides.stop().animate({ "margin-left": -nWidth*nBtnIndex}, 1000);
-    now=nBtnIndex;
+  });
+  //play,pause 컨트롤
+  ncontrol();
+  function ncontrol() {
+     ctrlN.click(function () {
+     if(ctrlN.text() == "play") {
+         ctrlN.text("pause");
+         ctrlN.addClass("playN") , clearInterval(nOutoplay);
+     } else {
+         ctrlN.text("play");
+         ctrlN.removeClass("playN") , nOutoplay =setInterval(nOuto,nspeed);
+     }
+   });
   }
- //play,pause 컨트롤
-    ncontrol();
-    function ncontrol() {
-        ctrlN.click(function () {
-        if (ctrlN.text() == "play") {
-            ctrlN.text("pause");
-            ctrlN.addClass("playN") , clearInterval(nOutoplay);
-        } else {
-            ctrlN.text("play");
-            ctrlN.removeClass("playN") , setInterval(nOuto,nspeed);
-        }
-      });
-    }//노티스보드배너영역
+  ////노티스보드배너영역
+  //
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
     const mVisual = $(".memorial_img>li");
     const mBtn = $(".m_control ul li");
     let mBtnIndex=0;
@@ -161,7 +174,7 @@ $(function () {
             if(mNext==mVisual.length)
             {mNext=0};
             mBtn.eq(mNext).trigger("click")
-            console.log(mVisual.length)
+            //console.log(mVisual.length)
         },mSpped)
     }
 
@@ -171,12 +184,12 @@ $(function () {
         mBtn.removeClass("mon");
         $(this).addClass("mon");
         mMove(mBtnIndex);
-        console.log("인덱스"+mBtnIndex)
+        //console.log("인덱스"+mBtnIndex)
     })
 
    
     function mMove(){
-        console.log(mCurrent, mBtnIndex)
+        //console.log(mCurrent, mBtnIndex)
         if(mCurrent==mBtnIndex) return;
         let cu=mVisual.eq(mCurrent)
         let ne=mVisual.eq(mBtnIndex)
