@@ -731,7 +731,8 @@ dl > .pa {
   top:-12px;
   left:360px;
   background: url(../images/white_play_pause.png) no-repeat 0px -28px;
-  background-size:24px ;
+  background-size:22px ;
+  color:transparent;
 }
 .m_control p.playM{
   background: url(../images/white_play_pause.png) no-repeat 0px 0px;
@@ -744,15 +745,16 @@ dl > .pa {
   left:400px;
   top:-20px;
   position:relative;
+  color:transparent;
 }
 .m_control ul li{
   background:url(../images/white_circle.png)
-  no-repeat 0px 6px;
-  background-size: 22px;
+  no-repeat 0px 7px;
+  background-size: 18px;
 }
 .m_control ul li.mon{
   background:url(../images/white_circle.png)
-  no-repeat 0px -18px;
+  no-repeat 0px -17px;
   background-size: 20px;
 }
 

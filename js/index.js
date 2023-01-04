@@ -141,30 +141,13 @@ $(function () {
          ctrlN.removeClass("playN") , nOutoplay =setInterval(nOuto,nspeed);
      }
    });
-  }
-  ////노티스보드배너영역
-  //
-
-
+  }//노티스보드배너영역
   
-
-
-
-
-
-
-
-
-
-
-
-
-
     const mVisual = $(".memorial_img>li");
     const mBtn = $(".m_control ul li");
     let mBtnIndex=0;
     let mCurrent=0;
-    let mSpped=3000;
+    let mSpped=4000;
     let mId; // setinterval
 
     mTimer();
@@ -178,7 +161,6 @@ $(function () {
         },mSpped)
     }
 
-
     mBtn.click(function(){
         mBtnIndex = $(this).index();
         mBtn.removeClass("mon");
@@ -186,19 +168,29 @@ $(function () {
         mMove(mBtnIndex);
         //console.log("인덱스"+mBtnIndex)
     })
-
    
     function mMove(){
         //console.log(mCurrent, mBtnIndex)
         if(mCurrent==mBtnIndex) return;
         let cu=mVisual.eq(mCurrent)
         let ne=mVisual.eq(mBtnIndex)
-        cu.css("left",0).stop().animate({left:"-100%"},2000);
-        ne.css("left","100%").stop().animate({left:0},2000);
+        cu.css("left",0).stop().animate({left:"-107.5%"},800);
+        ne.css("left","100%").stop().animate({left:0},800);
         mCurrent=mBtnIndex;
     }
 
-
+    mControl();
+    function mControl() {
+      $(".ctrlM").click(function () {
+        if ($(".ctrlM").text() == "play") {
+          $(".ctrlM").text("pause");
+          $(".ctrlM").addClass("playM") , clearInterval(mId);
+        } else {
+          $(".ctrlM").text("play");
+          $(".ctrlM").removeClass("playM") , mTimer();
+        }
+      });
+  }
 
  
 
