@@ -81,6 +81,22 @@ html {
 .skip_menu:focus {
   transform: translateY(0%);
 }
+
+
+
+
+/* quick메뉴 */
+.quick{
+  position:sticky;
+  width:189px;
+  height:189px;
+  background: url(../images/ico-quick.png) no-repeat;
+  background-size: cover;
+  
+
+
+}
+
 /*header*/
 /*header_top영역 */
 #header {
@@ -291,19 +307,6 @@ html {
 }
 /* header 끝 */
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* section1-intro */
 #container {
   width: 100%;
@@ -312,20 +315,6 @@ html {
   background-color: #124474;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .intro_text {
   color: #ffffff;
   max-width: 1800px;
@@ -333,8 +322,6 @@ html {
 .intro_text > div:first-child {
   width: 100%;
 }
-
-
 .intro .intro_text h2 {
   font-weight: 600;
   color: #ffffff;
@@ -357,9 +344,17 @@ html {
   left:0px;  
 }
 .intro_text .progress_bar{
+  position:relative;
   width:296px;
-  transform: translateY(68px);
+  top:65px;
+  left:6px;
   border: 0.8px solid #FFFFFFB3 ;
+  animation:progress 3s linear infinite;
+}
+
+@keyframes progress{
+  0%{width:0px;}
+  90%{width:296px;}
 }
 .ctrlB {
   position:absolute;
@@ -398,38 +393,6 @@ html {
   background: url(../images/white_circle.png) no-repeat 0px -23px;
   background-size: cover;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 dl > .pa {
   top: 12%;
@@ -471,14 +434,6 @@ dl > .pa {
 .intro_color1 img {
   bottom: 0;
 }
-
-
-
-
-
-
-
-
 
 .info_list {
   width: 100%;
@@ -615,46 +570,6 @@ dl > .pa {
   left: 0;
   top: 0;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* section2_notice영역 */
 #notice {
   padding-top: 100px;
@@ -731,6 +646,26 @@ dl > .pa {
   box-sizing: border-box; 
   /* height 줘야 감쌀수 있음 */
 }
+.board_table .plus{
+  width: 21px;
+  height: 21px;
+  background:url("../images/ico-plus-blue.png") no-repeat;
+  background-size:auto;
+  top: 23px;
+  left: 460px;
+  z-index:100;
+}
+.board_table .plus:hover{
+  animation : rotate 1s ease-in-out infinite; 
+}
+@keyframes rotate{
+  0%{transform:rotate(100deg)}
+  50%{transform:rotate(360deg)}
+  75%{transform:rotate(-360deg)}
+  100%{transform:rotate(360deg)}
+}
+
+
 .board_table > ul {
   height: 60px;
   border-bottom: 1px solid #c2c2c2;
@@ -862,6 +797,7 @@ dl > .pa {
   box-sizing: border-box;
   border-bottom: 1px solid #fff;
   top: 0px;
+  animation: progress 3s linear infinite; 
 }
 .ctrlM {
   position:absolute;

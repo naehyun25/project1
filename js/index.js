@@ -90,7 +90,9 @@ $(function () {
     ne.css("left","-100%").stop().animate({left:0},500);
     current=bBtnIdx;
     return false;
-  });//메인배너영역
+  });
+  
+//메인배너영역
 
   const nSlides=$(".board_imgs");//비쥬얼
   const nSlide=$(".board_imgs>li");//이미지한개
