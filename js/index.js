@@ -157,7 +157,6 @@ $(function () {
             if(mNext==mVisual.length)
             {mNext=0};
             mBtn.eq(mNext).trigger("click")
-            //console.log(mVisual.length)
         },mSpped)
     }
 
@@ -166,11 +165,9 @@ $(function () {
         mBtn.removeClass("mon");
         $(this).addClass("mon");
         mMove(mBtnIndex);
-        //console.log("인덱스"+mBtnIndex)
     })
    
     function mMove(){
-        //console.log(mCurrent, mBtnIndex)
         if(mCurrent==mBtnIndex) return;
         let cu=mVisual.eq(mCurrent)
         let ne=mVisual.eq(mBtnIndex)
@@ -234,7 +231,6 @@ $(function () {
           let sbNext=sbCurrent+1;
           if(sbNext==sBottomSlide.length)
           {sbNext=0};
-          console.log(sBottomSlide.length)
           sbottomBtn.eq(sbNext).trigger("click")
       },5000)
   }
@@ -244,7 +240,6 @@ $(function () {
     sbottomBtn.removeClass("bottomBtn");
       $(this).addClass("bottomBtn");
       sbMove(sbottomBtn);
-      
   })
  
   function sbMove(){
@@ -289,7 +284,6 @@ $(function () {
 $(".m_list ul li a").hover(
     function(){$(this).addClass('mactive');}   
     )
-//memorial hover// 다시해야함
 
 
 

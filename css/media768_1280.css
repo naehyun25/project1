@@ -3,8 +3,7 @@ html{overflow-x: hidden;
     overflow-y: scroll;}
 @media screen and (max-width: 1800px){
     .intro_color1{
-        bottom:0;
-        left:0;
+        bottom:232px;
         width:40vw;
     }
     .intro{
@@ -14,18 +13,20 @@ html{overflow-x: hidden;
         justify-content: space-between;
     }
     .intro_text div{
-        margin-left:10%
+        margin-left:2%
     }
-    .info_text{
-        float: left;
+    .intro_text div>div{
+    top: -132px;
+    left: 614px;
     }
     .info_list{
-        float:right;
+        top:-232px;
+        left:603px;
     }
     .info_list ul{
         display: flex;
         justify-content: space-around;
-        padding:56px 0 60px 0;
+        padding:62px 0 60px 0;
         margin-top:64px;
         background-color: #103d67;
     }
