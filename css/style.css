@@ -76,14 +76,12 @@ html {
   color: #fff;
   border-radius: 20px;
 }
-
+.ir_pm {display: block; overflow: hidden; font-size: 0; line-height: 0; text-indent: -9999px;}
+.ir_so {overflow: hidden; position: absolute; width: 0; height: 0; line-height: 0; text-indent: -9999px;}
 /* skipmenu 추가 */
 .skip_menu:focus {
   transform: translateY(0%);
 }
-
-
-
 
 /* quick메뉴 */
 .quick{
@@ -92,9 +90,6 @@ html {
   height:189px;
   background: url(../images/ico-quick.png) no-repeat;
   background-size: cover;
-  
-
-
 }
 
 /*header*/
@@ -710,22 +705,6 @@ dl > .pa {
   font-weight: 400;
   padding:4px 0px;
 }
-/* .m_list ul li a:hover {
-  border-bottom: 1px solid #ffffff;
-  border-bottom: 1px solid #ffffff;
-  border-top:6px solid #ffffff;
-  border-top-left-radius: 50%;
-  border-top-right-radius: 50%;
-} */
-.mactive::after {
-  content: "●";
-  display: block;
-  position: absolute;
-  font-size: 6px;
-  color: #fff;
-  top: -16px;
-  right: 50%;
-}
 .mactive{
   border-bottom: 1px solid #ffffff;
   /* border-top:6px solid #ffffff; */
@@ -1249,6 +1228,7 @@ dl > .pa {
   height:100px;
   position: absolute;
 }
+
 .service_b_img1{
   height:100px;
   left:0%;
@@ -1377,17 +1357,6 @@ footer.cover {
   font-size: 14px;
   color: #fff;
   position: relative;
-}
-.footer_top .link li:nth-child(n + 2) a/* :before */ {
-  /* content: "●";
-  display: block;
-  color: #fff;
-  font-size: 6px;
-  position: absolute;
-  top: 2px;
-  left: -22px; */
-  
-  
 }
 .footer_top .link li:nth-child(3) a {
   color: #3b81e1;
