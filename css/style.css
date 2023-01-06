@@ -103,27 +103,6 @@ html {
   width: 100%;
   background-color: #124474;
   height: 120px;
-} /* header 120px 지정해줌 */
-#header_top {
-  border-bottom: 1px solid #d4d4d4;
-  height: 39px;
-}
-/*header*/
-/*header_top영역 */
-#header {
-  width: 100%;
-  background-color: #124474;
-  height: 120px;
-} /* header 120px 지정해줌 */
-#header_top {
-  border-bottom: 1px solid #d4d4d4;
-  height: 39px;
-}
-/*header*/
-/*header_top영역 */
-#header {
-  width: 100%;
-  background-color: #124474;
 }
 #header_top {
   border-bottom: 1px solid #d4d4d4;
