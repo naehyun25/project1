@@ -267,26 +267,30 @@ $(function () {
   });
   pannels.eq(0).show();//board tabmenu
 
-  const meMenus=$(".m_list ul li a");
-  const mePannels=$(".m_texts>div");
-  meMenus.click(function(m){
-    m.preventDefault();
-    let mTg=$(this);
-    let mCurrentLink = mTg.attr("href");
-    meMenus.removeClass('mactive');
-    mTg.addClass('mactive');
-    mePannels.hide();
-    $(mCurrentLink).show();
-  })
-  meMenus.eq(0).addClass('mactive')
+
+
+const meMenus=$(".m_list ul li a");
+const mePannels=$(".m_texts>div");
+// meMenus.mouseover(
+//   function(){$(this).addClass('mactive');}   
+//   )
+// meMenus.mouseleave(
+//   function(){$(this).removeClass('mactive');}   
+//   )
+meMenus.click(function(m){
+  m.preventDefault();
+  let mTg=$(this);
+  let mCurrentLink = mTg.attr("href");
+  meMenus.removeClass('mactive');
+  mTg.addClass('mactive');
   mePannels.hide();
-  mePannels.eq(0).show();//memorial tabmenu
-
-
-$(".m_list ul li a").hover(
-    function(){$(this).addClass('mactive');}   
-    )
-
+  $(mCurrentLink).show();
+  $(".m_list ul li span").css("opacity","0")
+  $(this).find("span").css("opacity","1")
+})
+meMenus.eq(0).addClass('mactive')
+mePannels.hide();
+mePannels.eq(0).show();//memorial tabmenu
 
 
 

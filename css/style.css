@@ -710,9 +710,16 @@ dl > .pa {
 }
 .mactive{
   border-bottom: 1px solid #ffffff;
-  /* border-top:6px solid #ffffff; */
 }
-
+.m_list ul li span{
+content: "●";
+opacity: 0;
+font-size: 6px;
+color: #fff;
+top:-24px;
+left: -36px;
+position: relative;
+}
 .m_text {
   color: #fff;
   padding-top: 14px;
