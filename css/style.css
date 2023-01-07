@@ -325,7 +325,6 @@ html {
   border: 0.8px solid #FFFFFFB3 ;
   animation:progress 3s linear infinite;
 }
-
 @keyframes progress{
   0%{width:0px;}
   90%{width:296px;}
@@ -340,12 +339,12 @@ html {
   top:60px;
   left:330px;
   z-index: 1;
+  cursor: pointer;
 }
 .intro_text .playB {
   background: url(../images/white_play_pause.png) no-repeat 0px 1px;
   background-size: cover;
 }
-
 .info_control {
   width: 450px;
   margin-top: 70px;
@@ -353,6 +352,7 @@ html {
   justify-content: center;
   top:-16px;
   left:206px;
+  cursor: pointer;
 }
 .info_control li {
   width: 0.8em;
@@ -367,7 +367,7 @@ html {
   background: url(../images/white_circle.png) no-repeat 0px -23px;
   background-size: cover;
 }
-
+.ctrlB
 dl > .pa {
   top: 12%;
   left: 0%;
@@ -589,6 +589,7 @@ dl > .pa {
   background-size: 16px;
   top: -28px;
   left: 587px;
+  cursor: pointer;
 }
   
 .board_btn {
@@ -597,6 +598,7 @@ dl > .pa {
   left: 630px;
   height: 10px;
   justify-content: flex-start;
+  cursor: pointer;
 }
 
 .board_btn li{
@@ -628,6 +630,7 @@ dl > .pa {
   top: 23px;
   left: 460px;
   z-index:100;
+  cursor: pointer;
 }
 .board_table .plus:hover{
   animation : rotate 1s ease-in-out infinite; 
@@ -747,6 +750,7 @@ dl > .pa {
 }
 .m_control {
   top:260px;
+  cursor: pointer;
 }
 
 .m_control .bar {
@@ -766,6 +770,7 @@ dl > .pa {
   background: url(../images/white_play_pause.png) no-repeat 0px -28px;
   background-size:22px ;
   color:transparent;
+  cursor: pointer;
 }
 .m_control p.playM{
   background: url(../images/white_play_pause.png) no-repeat 0px 0px;
@@ -779,6 +784,7 @@ dl > .pa {
   top:-20px;
   position:relative;
   color:transparent;
+  cursor: pointer;
 }
 .m_control ul li{
   background:url(../images/white_circle.png)
@@ -1193,6 +1199,7 @@ dl > .pa {
   display: flex;
   justify-content: center;
   top:12%;
+  cursor: pointer;
 }
 .center_ctrbox li{
   background: url(../images/white_circle.png) no-repeat 0px 6px;
@@ -1248,6 +1255,7 @@ dl > .pa {
 .center_b_ctrbox{
   justify-content: center;
   padding-top:30px;
+  cursor: pointer;
 }
 .center_b_ctrbox p{
   background: url(../images/white_circle.png) no-repeat 0px 6px;
