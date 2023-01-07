@@ -517,21 +517,27 @@ dl > .pa {
 }
 .banner_list ul li .imgbox1 a {
   background: url(../images/ico-place-white.png) no-repeat 50% 14%;
+  background-size: 40px;
 }
 .banner_list ul li .imgbox2 a {
   background: url(../images/ico-campground-white.png) no-repeat 50% 14%;
+  background-size: 40px;
 }
 .banner_list ul li .imgbox3 a {
   background: url(../images/ico-together-white.png) no-repeat 50% 14%;
+  background-size: 40px;
 }
 .banner_list ul li .imgbox4 a {
   background: url(../images/ico-education-white.png) no-repeat 50% 14%;
+  background-size: 40px;
 }
 .banner_list ul li .imgbox5 a {
   background: url(../images/ico-commentary-white.png) no-repeat 50% 14%;
+  background-size: 40px;
 }
 .banner_list ul li .imgbox6 a {
   background: url(../images/ico-unification-white.png) no-repeat 50% 14%;
+  background-size: 40px;
 }
 .color2 {
   width: 54vw;
@@ -1067,6 +1073,11 @@ position: relative;
   justify-content: space-around;
   align-items: center;
 }
+.booking_imgbox li img{
+  position:relative;
+  top:0;
+}
+
 .booking_imgbox li a {
   display: block;
   width: 116px;

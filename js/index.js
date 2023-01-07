@@ -263,7 +263,6 @@ $(function () {
 
     pannels.hide();
     $(currentLink).show();
-    //menus.removeClass(active)//hover이미준상태
   });
   pannels.eq(0).show();//board tabmenu
 
@@ -292,7 +291,25 @@ meMenus.eq(0).addClass('mactive')
 mePannels.hide();
 mePannels.eq(0).show();//memorial tabmenu
 
+//animation
+const mBannerimgs = $(".banner_list ul li div a")
+mBannerimgs.mouseover(function(){
+  $(this).css("background-size",48)})
+mBannerimgs.mouseleave(function(){
+    $(this).css("background-size",40)})
+    //banner_list 
 
+const bookingImgbox = $(".booking_imgbox li")
+const bookingImgA = $(".booking_imgbox li a")
+// bookingImgbox.mouseover(function(){
+//   $(this).find("img").css("top","-8px")})
+// bookingImgbox.mouseleave(function(){
+//     $(this).find("img").css("top","0px")})
+bookingImgbox.mouseover(function(){
+  $(this).find("img").css("top","0px").stop().animate({top:"-12px"},300)})
+bookingImgbox.mouseleave(function(){
+  $(this).find("img").css("top","-12px").stop().animate({top:"0px"},300)})
+  
 
 
 
