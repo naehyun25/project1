@@ -82,7 +82,57 @@ html {
 .skip_menu:focus {
   transform: translateY(0%);
 }
-
+#all_layer{
+  display:none;
+  position: fixed;
+  z-index:9999999;
+  background-color: rgba(0, 0, 0, 0.767);
+  width: 100%;
+  height: 100%;
+}
+.all_menu_layer{
+  position: absolute;
+  background-color: #fffff8;
+  top:10%;
+  left: 18%;
+}
+.all_menu_con>div{
+  background-color: #273346;
+  color:white;
+  font-size: 1.4em;
+  line-height: 18px;
+  padding: 20px 0;
+  margin: auto;
+  text-align: center;
+  letter-spacing: 2px ;
+}
+.all_menu_con ul{
+  display: flex;
+}
+.all_menu_con ul li{
+  padding: 36px;
+}
+.all_menu_con ul li dt{
+    font-size: 1.2em;
+    color: #273346;
+    font-weight: bold;
+    padding: 18px 6px 18px 0px;
+}
+.all_menu_con ul li dd{
+  font-size: 1.0em;
+  color: #666666;
+  padding: 2px 0;
+}
+.all_menu_layer button{
+  position:absolute;
+  color:white;
+  top:12px;
+  right:22px;
+  background-color: #273346;
+}
+.all_menu_layer button img{
+  width:30px;
+}
 /* quick메뉴 */
 .quick{
   position:sticky;
@@ -206,6 +256,13 @@ html {
   font-size: 18px;
   padding: 15px 10px;
 }
+
+
+
+
+
+
+
 .bottom .all_menu {
   top: 16px;
   right: 60px;
@@ -712,7 +769,7 @@ dl > .pa {
   font-size: 16px;
   color: #ffffff;
   font-weight: 400;
-  padding:4px 0px;
+  padding: 4px 0px 4px 4px;
 }
 .mactive{
   border-bottom: 1px solid #ffffff;
@@ -723,7 +780,7 @@ opacity: 0;
 font-size: 6px;
 color: #fff;
 top:-24px;
-left: -36px;
+left: -34px;
 position: relative;
 }
 .m_text {

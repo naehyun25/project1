@@ -285,8 +285,10 @@ meMenus.click(function(m){
   mePannels.hide();
   $(mCurrentLink).show();
   $(".m_list ul li span").css("opacity","0")
-  $(this).find("span").css("opacity","1")
+  mTg.find("span").css("opacity","1")
 })
+meMenus.find("span").css("opacity","0")
+$(".m_list ul li:first-child").find("span").css("opacity","1")
 meMenus.eq(0).addClass('mactive')
 mePannels.hide();
 mePannels.eq(0).show();//memorial tabmenu
@@ -310,8 +312,13 @@ bookingImgbox.mouseover(function(){
 bookingImgbox.mouseleave(function(){
   $(this).find("img").css("top","-12px").stop().animate({top:"0px"},300)})
   
-
-
+//all_menu_layer
+$(".all_menu").click(function(){
+  $("#all_layer").css("display","block")
+})
+$(".all_menu_layer button").click(function(){
+  $("#all_layer").css("display","none")
+})
 
 
 
