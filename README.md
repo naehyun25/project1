@@ -18,7 +18,7 @@
 
 
 ## General Information
-> 기획서 보기 [_here_](https://https://github.com/naehyun25/project1/blob/22c09ebd65501a152b654c49c6aca0f01055bd7e/815project1_proposal.pdf)
+> 기획서 보기 [_here_](https://github.com/naehyun25/project1/blob/22c09ebd65501a152b654c49c6aca0f01055bd7e/815project1_proposal.pdf)
 - 기획서 목차
 1.제작동기 2. 벤치마킹 3.전략수립 4.프로토타입 5.구현
 <!-- - 기획서의 내용을 간락히 요약 정리 -->
