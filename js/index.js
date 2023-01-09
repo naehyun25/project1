@@ -319,9 +319,4 @@ $(".all_menu").click(function(){
 $(".all_menu_layer button").click(function(){
   $("#all_layer").css("display","none")
 })
-
-
-
-
-
 }); //jQuery

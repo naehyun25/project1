@@ -134,14 +134,28 @@ html {
   width:30px;
 }
 /* quick메뉴 */
-.quick{
+#quick{
   position:sticky;
-  width:189px;
-  height:189px;
-  background: url(../images/ico-quick.png) no-repeat;
-  background-size: cover;
+  top:76vh;
+  left:6vw;
+  z-index: 80;
 }
-
+.quick_bg{
+  position: absolute;
+  transform-origin: 50% 50%;
+  animation:quick 10s infinite ;
+  top: -41px;
+  left: -41px;
+}
+.quick_con{
+  position: absolute;
+  top: 38px;
+  left: 40px;
+}  
+@keyframes quick {
+  0%{transform:rotate(0deg)}
+  100%{transform:rotate(360deg)} 
+}
 /*header*/
 /*header_top영역 */
 #header {
@@ -256,13 +270,6 @@ html {
   font-size: 18px;
   padding: 15px 10px;
 }
-
-
-
-
-
-
-
 .bottom .all_menu {
   top: 16px;
   right: 60px;
@@ -337,7 +344,6 @@ html {
   text-decoration: underline blue;
 }
 /* header 끝 */
-
 /* section1-intro */
 #container {
   width: 100%;
@@ -490,8 +496,6 @@ dl > .pa {
   margin: 4px 0 0 12px;
   vertical-align: text-bottom;
 }
-
-
 .intro_banner {
   z-index: 10;
   max-width: 80%;
@@ -654,7 +658,6 @@ dl > .pa {
   left: 587px;
   cursor: pointer;
 }
-  
 .board_btn {
   width: 15px;
   top: 15px;
@@ -663,7 +666,6 @@ dl > .pa {
   justify-content: flex-start;
   cursor: pointer;
 }
-
 .board_btn li{
   padding:10px 3px;
   color:transparent;
@@ -671,12 +673,10 @@ dl > .pa {
   0px 3px no-repeat;
   background-size: 22px;
 }
-
 .board_btn li.bon{
   background: url(../images/blue_circle.png)0px -18px no-repeat;
   background-size: 20px;
 }
-
 .board_table {
   width: 40%;
   transform: translateY(-62px);
@@ -704,8 +704,6 @@ dl > .pa {
   75%{transform:rotate(-360deg)}
   100%{transform:rotate(360deg)}
 }
-
-
 .board_table > ul {
   height: 60px;
   border-bottom: 1px solid #c2c2c2;
@@ -822,7 +820,6 @@ position: relative;
   top:260px;
   cursor: pointer;
 }
-
 .m_control .bar {
   width: 340px;
   height: 1px;
@@ -846,7 +843,6 @@ position: relative;
   background: url(../images/white_play_pause.png) no-repeat 0px 0px;
   background-size: 20px;
 }
-
 .m_control ul{
   display: flex;
   justify-content: flex-start;
@@ -866,8 +862,6 @@ position: relative;
   no-repeat 0px -17px;
   background-size: 20px;
 }
-
-
 .memorial_img{
   width: 702px;
   position: relative;
@@ -882,8 +876,6 @@ position: relative;
 .mimg2{
   left:100%;
 }
-
-
 /* section2 */
 #info {
   margin-top: 80px;
@@ -1134,7 +1126,6 @@ position: relative;
   position:relative;
   top:0;
 }
-
 .booking_imgbox li a {
   display: block;
   width: 116px;
@@ -1293,7 +1284,6 @@ position: relative;
 .center_bottom>p{
   padding-top: 12px;
 }
-
 .center_bottom .service_imgbox{
   width: 361px;
   height: 200px;
@@ -1310,7 +1300,6 @@ position: relative;
   height:100px;
   position: absolute;
 }
-
 .service_b_img1{
   height:100px;
   left:0%;
