@@ -48,7 +48,11 @@
     <script src="js/index.js"></script>
   </head>
   <body>
-    <a href="#banner" class="skip_menu">본문바로가기</a>
+    <a href="#place" class="skip_menu">본문바로가기</a>
+    <a href="#exhibit" class="skip_menu">전시장바로가기</a>
+    <a href="#education" class="skip_menu">교육안내바로가기</a>
+    <a href="#event" class="skip_menu">문화행사바로가기</a>
+    <a href="#research" class="skip_menu">학술연구바로가기</a>
     <div id="layer">
       <p>해당 사이트는 학습용으로 제작되었으며 독립기념관과 무관합니다.</p>
       <p>구직용 포트폴리오로 상업적 목적이 없음을 알립니다.</p>
@@ -327,7 +331,9 @@
                 <h2><span>불가능에 도전하여 가능을 창조한 독립정신</span><br>대한민국 독립기념관</h2>
                 <p>독립기념관은 위대한 대한민국을 함께 만들어 가고자 합니다.</p>
                 <div class="pr">
-                  <p class="progress_bar"></p>
+                  <div class="progress_bar">
+                    <div class="bar"></div>
+                  </div>
                   <p class="ctrlB">play</p>
                   <ul class="info_control pr">
                     <li class="mbtn on"></li>
@@ -385,7 +391,7 @@
               <div class="banner_list pa">
                 <ul>
                   <li>
-                    <div class="imgbox1"><a href="#" id="banner">장소대관</a></div>
+                    <div class="imgbox1"><a href="#" id="place">장소대관</a></div>
                   </li>
                   <li>
                     <div class="imgbox2"><a href="#">캠핑장</a></div>
@@ -529,7 +535,7 @@
           <div class="memorial_board inner df pr">
             <div class="memorial_box">
               <div class="m_list">
-                <ul class = "pr">
+                <ul class = "pr" id="exhibit">
                   <li><a href="#m1">상설전시<span>●</span></a></li>
                   <li><a href="#m2">특별전시<span>●</span></a></li>
                   <li><a href="#m3">시.어록비<span>●</span></a></li>
@@ -576,7 +582,7 @@
         <!-- //section2- main-notice영역끝 -->
         <section id="info" class="cover pr">
           <div class="inner pr">
-            <div class="pa">
+            <div class="pa" id="education">
               <h3>교육프로그램<span class="pa">2022.12</span></h3>
               <div class="plusimg pa"><img src="images/ico-plus-white.png" alt="교육프로그램더보기"></div>
             </div>
@@ -613,7 +619,7 @@
             <article class="info_event inner df dfitem">
               <div class="event_imgbox w50"><img src="images/img-culture.png" alt="독립기념행사의퍼포먼스를보여주고있는사람"></div>
               <div class="event_board w50">
-                <div class="text_area">
+                <div class="text_area" id="event">
                   <h4>문화행사 안내</h4>
                   <div>
                     <p>독립기념관은 다채로운 문화행사를 정기적으로 개최하고 있습니다.</p>
@@ -630,7 +636,7 @@
             </article>
             <article class="info_data inner df dfitem">
               <div class="data_board w50">
-                <div class="text_area">
+                <div class="text_area" id="research">
                   <h4>학술연구</h4>
                   <div>
                     <p>독립기념관은 독립운동이 남겨준 소중한 자산을 연구합니다.</p>

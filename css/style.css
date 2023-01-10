@@ -36,6 +36,7 @@ html {
   clear: both;
 }
 .skip_menu {
+  width:100%;
   position: fixed;
   left: 0;
   top: 0;
@@ -44,6 +45,9 @@ html {
   padding: 10px 15px;
   text-decoration: none;
   transform: translateY(-100px);
+  z-index:10;
+  text-align: center;
+  font-weight:bolder;
 }
 .df {
   display: flex;
@@ -383,11 +387,19 @@ html {
 .intro_text .progress_bar{
   position:relative;
   width:296px;
+  height: 1px;
   top:65px;
   left:6px;
-  border: 0.8px solid #FFFFFFB3 ;
+  background-color: #FFFFFFB3 ;
   animation:progress 3s linear infinite;
 }
+.progress_bar .bar{
+  width:0%;
+  height: 3px;
+  background-color: #999797b3;
+
+}
+
 @keyframes progress{
   0%{width:0px;}
   90%{width:296px;}
