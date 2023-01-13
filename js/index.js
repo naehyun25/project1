@@ -7,6 +7,9 @@ $(function () {
   let bBtnIdx=0;//초기버튼인덱스
   let id;
 
+
+
+
  //버튼클릭
  bBtn.click(function(){
     bBtnIdx=$(this).index();
@@ -92,6 +95,21 @@ $(function () {
     return false;
   });
   
+ 
+  // let barStatus
+  // barProgress();
+  // function barProgress(){
+  //   if(barProgress==0){
+  //   setInterval(
+  //     $(".bar").css("width","0%").stop().animate({"width":"100%"},3000),1
+  //     )}
+  //     console.log(barStatus)
+  // }
+
+
+
+
+
 //메인배너영역
 
   const nSlides=$(".board_imgs");//비쥬얼
