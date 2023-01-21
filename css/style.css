@@ -471,6 +471,10 @@ dl > .pa {
 .info_text .pr:first-child > :nth-child(3) {
   font-weight: 700;
 }
+.info_text dl:nth-child(2) dd{
+  top: 10px;
+  
+}
 .intro_color1 {
   width: 50vw;
   height: 160px;
@@ -1471,15 +1475,15 @@ footer.cover {
   background: url(../images/ft-btn-naverblog.png) no-repeat;
 }
 .footer_bottom {
-  vertical-align: center;
-  margin: 30px 0px 20px 300px;
-}
+  margin: 30px 0px 20px 100px;
+} 
 .footer_bottom p {
   font-size: 13px;
   color: rgba(255, 255, 255, 0.5);
   margin: 0 auto;
 }
 .footer_bottom span {
-  margin-right: 30px;
+  margin-right: 60px;
 }
+
 /* footer끝 */
