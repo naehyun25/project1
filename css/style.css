@@ -400,6 +400,13 @@ html {
 
 }
 
+#weather{
+  z-index:9999999999;
+  top: 10%;
+  left: 10%;
+  background: white;
+}
+
 @keyframes progress{
   0%{width:0px;}
   90%{width:296px;}

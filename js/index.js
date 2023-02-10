@@ -96,16 +96,6 @@ $(function () {
   });
   
  
-  // let barStatus
-  // barProgress();
-  // function barProgress(){
-  //   if(barProgress==0){
-  //   setInterval(
-  //     $(".bar").css("width","0%").stop().animate({"width":"100%"},3000),1
-  //     )}
-  //     console.log(barStatus)
-  // }
-
 
 
 
@@ -338,3 +328,4 @@ $(".all_menu_layer button").click(function(){
   $("#all_layer").css("display","none")
 })
 }); //jQuery
+
