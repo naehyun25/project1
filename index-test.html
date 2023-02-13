@@ -1,26 +1,52 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="css/style-text.css">
-  <script src='https://code.jquery.com/jquery-1.12.0.min.js'></script>
-  <script src="js/script.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kopis-cors-extensiton-success</title>
 </head>
 <body>
-       <!-- 햄버거클릭메뉴구현 -->
-  <div class="all_menu pa">
-    <button><img src="images/ico-menu.png" alt="전체메뉴보기"></button>
-  </div>
-
-  <!-- <div id="layer">
-    <p>해당 사이트는 학습용으로 제작되었으며 독립기념관과 무관합니다.</p>
-    <p>구직용 포트폴리오로 상업적 목적이 없음을 알립니다.</p>
-    <button>닫기</button>
-  </div> -->
-
+    <!-- 1. //kopis 공연예술통합전산망 //xml만 제공함
+a31fe329cd40468e8b664b205d26e7ff -->
+<div class="wrap"></div>
+<script src='https://code.jquery.com/jquery-1.12.0.min.js'></script>
+<!-- success <script>
+    $(function(){
+        $.ajax({
+            url:'http://www.kopis.or.kr/openApi/restful/pblprfr?service=a31fe329cd40468e8b664b205d26e7ff&stdate=20230101&eddate=20230130&cpage=1&rows=5&prfstate=02&signgucode=11',
+            dataType : 'xml',
+            success:function(data){
+                document.write(data)
+                    for(var i in data){
+                        console.log(data)
+                        //var $ip_address=data[i].ip_address;
+                    }
+                }
+            })
+        });
+</script> -->
+<script>
+    const url = ('http://www.kopis.or.kr/openApi/restful/pblprfr?service=a31fe329cd40468e8b664b205d26e7ff&stdate=20230101&eddate=20230130&cpage=1&rows=5&prfstate=02&signgucode=11')
+    fetch(url)
+    .then((response)=>response.text())
+    .then((str)=>new DOMParser().parseFromString(str, 'application/xml'))
+    .then((xml)=>{
+        console.log(xml);
+        let datas=xml;
+        let posters=datas.querySelectorAll('poster');
+        console.log(posters)
+        for(i=0;i<posters.length;i++){
+            
+                let poster = posters[i].innerHTML;
+                let container = document.createElement('div');
+                container.innerHTML=`
+                <img src="${posters[i].innerHTML}" alt="">
+                `
+                document.querySelector('.wrap').appendChild(container);
+            
+        }
+    });
+</script>
 </body>
 </html>
-            
