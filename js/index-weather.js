@@ -11,7 +11,7 @@ console.log(castCon);
 let statusText,rainIcon,locText;
 rainIcon=['<i class="bi bi-cloud-drizzle"></i>','<i class="bi bi-brightness-high"></i>','<i class="bi bi-cloud"></i>','<i class="bi bi-cloud-snow"></i>',];
 
-let url = 'https://apis.data.go.kr/1360000/VilageFcstInfoService_2.0/';
+let url = 'http://apis.data.go.kr/1360000/VilageFcstInfoService_2.0/';
 let params = {
     type : ['getUltraSrtNcst','getVilageFcst'],
     key : 'AveojOZ5ZNcfL29JQhWKdzFdcIOInK0reWkvwc%2B%2Bmzf5gGSgUoHNv24YP3jNGPiXAUqNyYSfpr2dtsynkZJOgg%3D%3D',
