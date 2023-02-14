@@ -29,7 +29,7 @@ a31fe329cd40468e8b664b205d26e7ff -->
 </script> -->
 <script>
     const url = ('http://www.kopis.or.kr/openApi/restful/pblprfr?service=a31fe329cd40468e8b664b205d26e7ff&stdate=20230101&eddate=20230130&cpage=1&rows=5&prfstate=02&signgucode=11')
-    fetch(url,{referrerPolicy: "unsafe_url" })
+    fetch(url)
     .then((response)=>response.text())
     .then((str)=>new DOMParser().parseFromString(str, 'application/xml'))
     .then((xml)=>{
