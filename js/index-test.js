@@ -1,13 +1,13 @@
 $(function () {
-  //SLIDEs    
-    const bSlide=$(".banner_img li") //이미지
+  //SLIDEs 
+    const bSlide=$(".banner_img li")
+    let bImg=$(".banner_img li img")
     const bBtn=$(".info_control li") //버튼
     const speed=3000;
     let current =0;//현재
     let bBtnIdx=0;//초기버튼인덱스
     let id;
-  
-  
+ 
   
   
    //버튼클릭

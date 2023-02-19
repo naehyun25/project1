@@ -4,6 +4,7 @@ let year = String(date.getFullYear());
 let month = String(date.getMonth()+1).padStart(2,"0");
 let day = String(date.getDate()).padStart(2,"0");
 let now = year+month+day;
+let pageNow = `${year}년 ${month}월 ${day}일`
 
 //Fetch
 const castCon = document.querySelector("#weather");
@@ -47,18 +48,18 @@ async function setPosts(){
         rainInfo:function(){
             let info = this.rain;
             if(info==0){
-                statusText="맑음";
+                statusText="맑아요";
                 rainIcon=rainIcon[1];
             }else{
                 if(info==1){
-                    statusText='비옴';
+                    statusText='비가옵니다';
                     rainIcon=rainIcon[0];
                 }else if(info==2){
-                    statusText='비/눈';
-                    rainIcon=rainIcon[2];
+                    statusText='비나 눈이 와요';
+                    rainIcon=rainIcon[3];
                 }else{
-                    statusText='모지';
-                rainIcon=rainIcon[3];}
+                    statusText='흐려요';
+                rainIcon=rainIcon[2];}
             }
 
         },
@@ -77,11 +78,12 @@ async function setPosts(){
     cast.rainInfo();
     cast.loc();
     castp.innerHTML=`
-        <span>오늘날짜 : ${cast.baseDate}</span>
-        <span>지역 : 서울/강남</span>
-        <span>강수형태 : ${statusText}${rainIcon} </span>
+        <span>${pageNow}</span>
+        <p>오늘 독립기념관 날씨는</p>
+        <p>${statusText}${rainIcon} </p>
         <span>기온 : ${cast.temperature}℃</span>
         <span>바람 : ${cast.wind}/ms</span>
+        <p><a href="https://www.weather.go.kr/w/index.do" style="font-size:10px ">출처:기상청</a></p>
     `
     castCon.appendChild(castp);
 };

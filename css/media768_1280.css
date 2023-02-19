@@ -1,45 +1,49 @@
 @charset "UTF-8";
-html{overflow-x: hidden;
-    overflow-y: scroll;}
 @media screen and (max-width: 1800px){
-    .intro_color1{
-        bottom:232px;
-        width:40vw;
+    #container .intro_color1{
+        width:100%;
     }
     .intro{
         display: flex;
         flex-direction: column-reverse;
         align-content: center;
-        justify-content: space-between;
     }
-    .intro_text div{
-        margin-left:2%
+    .intro .intro_text{
+      width: 100%;
+      position: relative;
+      padding-left: 20px;
+      display: flex;
+      flex-direction: column;
     }
-    .intro_text div>div{
-    top: -132px;
-    left: 614px;
+    .intro_text>div:first-child{
+      display: flex;
     }
-    .info_list{
-        top:-232px;
-        left:603px;
+    .intro_text>div>div{
+      width: 50%;
     }
-    .info_list ul{
+    .intro_text .info_text{
+      width: 100%;
+    }
+    .intro_text .info_list{
+       width: 100%;
+    }
+    .intro_text .info_list ul{
         display: flex;
         justify-content: space-around;
-        padding:62px 0 60px 0;
-        margin-top:64px;
-        background-color: #103d67;
+        padding:14px;
     }
-    dl > .pa {
-        left: 16%;
-    }
-    .intro_banner{
+    .intro .intro_banner{
         top:0px;
         left:0px;
         position:relative;
+        width: 94%;
     }
-    .swipper{display: none;}
-    
+    .intro_banner div.banner_list{
+      width: 14%;
+    }
+    .swipper{
+      display: none;
+    }
     }
 
 @media screen and (max-width: 1280px){
