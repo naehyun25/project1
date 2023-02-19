@@ -1,4 +1,4 @@
-@charset "utf-8";
+@charset "UTF-8";
 html {
   overflow-y: scroll;
 }
@@ -780,6 +780,12 @@ dl > .pa {
   white-space: nowrap;
   text-overflow: ellipsis;
 }
+.board_table > ul > li > ul > li a span:first-child {
+  width: 80%;
+}
+.board_table > ul > li > ul > li a span:nth-child(2) {
+  width: 20%;
+}
 .board_table > ul > li > ul > li > a > span:nth-child(2) {
   color: #7c7c7c;
 }
@@ -1515,4 +1521,5 @@ footer.cover {
 .footer_bottom span {
   margin-right: 60px;
 }
+
 /* footer끝 */

@@ -1,4 +1,6 @@
 @charset "UTF-8";
+html{overflow-x: hidden;
+    overflow-y: scroll;}
 @media screen and (max-width: 1800px){
     #container .intro_color1{
         width:100%;
@@ -45,14 +47,37 @@
       display: none;
     }
     }
-
 @media screen and (max-width: 1280px){
 /* header top/ bottom gnb 사라짐 */
 #header_top{display: none;}
 .gnb{display:none;}
 .gnb{background-color: black;}
 .intro_banner{width:100%;}
-
+div#all_layer{
+  position: sticky;
 }
-
+#all_layer .all_menu_layer{
+top: 10%;
+left:0;
+}
+.all_menu_con ul{
+  flex-direction:column ;
+}
+.info_text dd {
+  margin: 0;
+}
+.intro_banner div.banner_list{
+  width: 18%;
+  min-width: 16%;
+}
+.intro_text>div>div:nth-child(2){
+  display: none;
+}
+.ctrlN {
+  display: none;
+}
+.board_table ul li ul {
+  width: 100%;
+}
+}
 @media screen and (max-width:768px){}

@@ -47,14 +47,42 @@ html{overflow-x: hidden;
       display: none;
     }
     }
-
 @media screen and (max-width: 1280px){
 /* header top/ bottom gnb 사라짐 */
 #header_top{display: none;}
 .gnb{display:none;}
 .gnb{background-color: black;}
 .intro_banner{width:100%;}
+div#all_layer{
+  position: sticky;
+}
+#all_layer .all_menu_layer{
+top: 10%;
+left:0;
+}
+.all_menu_con ul{
+  flex-direction:column ;
+}
+.info_text dd {
+  margin: 0;
+}
+.intro_banner div.banner_list{
+  width: 18%;
+  min-width: 16%;
+}
 
+.intro_text>div>div:nth-child(2){
+  display: none;
+}
+.ctrlN {
+  display: none;
+}
+
+
+
+.board_table ul li ul {
+  width: 100%;
+}
 }
 
 @media screen and (max-width:768px){}
@@ -879,6 +907,12 @@ dl > .pa {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+}
+.board_table > ul > li > ul > li a span:first-child {
+  width: 80%;
+}
+.board_table > ul > li > ul > li a span:nth-child(2) {
+  width: 20%;
 }
 .board_table > ul > li > ul > li > a > span:nth-child(2) {
   color: #7c7c7c;

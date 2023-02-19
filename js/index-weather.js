@@ -39,7 +39,6 @@ async function setPosts(){
     console.log(posts);
     const datas = posts.response.body.items.item;
     console.log(datas);
-    //ehdwjrdythtodtjd
     const castp = document.createElement('p');
 
     let cast={
@@ -83,7 +82,7 @@ async function setPosts(){
         <p>${statusText}${rainIcon} </p>
         <span>기온 : ${cast.temperature}℃</span>
         <span>바람 : ${cast.wind}/ms</span>
-        <p><a href="https://www.weather.go.kr/w/index.do" style="font-size:10px ">출처:기상청</a></p>
+        <p><a href="https://www.weather.go.kr/w/index.do" style="font-size:12px">출처:기상청</a></p>
     `
     castCon.appendChild(castp);
 };
