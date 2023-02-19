@@ -194,7 +194,7 @@ html {
   position: absolute;
   background-color: #fffff8;
   top:10%;
-  left: 18%;
+  left: 16%;
 }
 .all_menu_con>div{
   background-color: #273346;
@@ -219,16 +219,23 @@ html {
     padding: 18px 6px 18px 0px;
 }
 .all_menu_con ul li dd{
-  font-size: 1.0em;
-  color: #666666;
   padding: 2px 0;
 }
+.all_menu_con ul li dd a{
+  font-size: 1em;
+  color: #666666;
+}
+.all_menu_con ul li dd:hover a{
+  color:#0e0e0e;
+}
+
 .all_menu_layer button{
   position:absolute;
   color:white;
-  top:12px;
+  top:16px;
   right:22px;
-  background-color: #273346;
+  letter-spacing: -1px;
+  background-color: transparent;
 }
 .all_menu_layer button img{
   width:30px;
@@ -264,7 +271,7 @@ html {
   height: 120px;
 }
 #header_top {
-  border-bottom: 1px solid #d4d4d4;
+  border-bottom: 1px solid #416990;
   height: 40px;
 }
 .top ul {
@@ -352,12 +359,10 @@ html {
   padding: 15px 10px 0 10px;
 }
 .bottom .bottom_logo {
-  top: 4px;
   left: 32px;
 }
-
 .bottom nav {
-  line-height: 64px;
+  line-height: 62px;
   text-align: center;
 }
 .bottom nav ul li {
@@ -382,20 +387,39 @@ html {
 }
 .gnb_menu {
   margin: 0 10%;
-  padding-right: 6%;
-  display: none;
   overflow: hidden;
-  transition: padding 0.5s linear;
-  padding: 0 0;
+  height: 0;
+  transition: height 0.6s;
+}
+.gnb:hover .gnb_menu {
+  height: 450px;
 }
 .gnb_menu ul {
   display: flex;
   align-items: flex-start;
   justify-content: space-around;
 }
+.gnb > ul > li:hover > a {
+  color: #2885dd;
+}
 .gnb .gnb_menu ul li dl {
   text-align: left;
   position: relative;
+}
+.gnb ul li dl::after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 1px;
+  width: 0%;
+  top: 30px;
+  left: 80px;
+  transition: all 0.3s;
+}
+.gnb ul li dl:hover::after {
+  background: #124474;
+  width:60%;
+  height: 2px;
 }
 .gnb_menu li dt {
   font-size: 18px;
@@ -407,42 +431,29 @@ html {
 }
 .gnb_menu ul li dl dd a {
   font-size: 14px;
-  padding: 0;
+  padding: 0 0 1px 0;
   color: #666666;
   font-weight: 400;
+  border-bottom :0px;
 }
-.gnb > ul > li:hover > a {
-  color: #2885dd;
+.gnb ul li dl dd:hover a {
+  border-bottom: 2px solid #2885dd;
+  position: relative;
 }
-.gnb:hover .gnb_menu {
-  display: block;
-  padding: 10px 0;
-}
-.gnb ul li dl::after {
-  content: "";
-  display: block;
-  background: #e7f4ff;
-  position: absolute;
-  height: 1px;
-  width: 60%;
-  top: 30px;
-  left: 80px;
-}
-.gnb ul li dl:hover::after {
-  background: #124474;
-}
-.gnb ul li dl dd::after {
+.gnb ul li dl dd a::after {
   content: "●";
   font-size: 8px;
   color: #2885dd;
   visibility: hidden;
+  position: absolute;
+  top: 0;
+  right: -12px;
 }
-.gnb ul li dl dd:hover::after {
+.gnb ul li dl dd:hover a::after {
   visibility: visible;
 }
-.gnb ul li dl dd:hover {
-  text-decoration: underline blue;
-}
+
+
 /* header 끝 */
 /* section1-intro */
 #container {
