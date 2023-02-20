@@ -692,6 +692,8 @@ dl > .pa {
   color:transparent;
   background:url(../images/blue_play_pause.png) 0px 2px no-repeat;
   background-size: 22px;
+  background-origin: content-box;
+  padding-left: 587px;
 }
 .ctrlN{
   position: relative;
@@ -699,8 +701,9 @@ dl > .pa {
   background:url(../images/blue_play_pause.png) 2px -16px no-repeat;
   background-size: 16px;
   top: -28px;
-  left: 587px;
+  padding-left: 587px;
   cursor: pointer;
+  background-origin: content-box;
 }
 .board_btn {
   width: 15px;

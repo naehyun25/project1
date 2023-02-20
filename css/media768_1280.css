@@ -59,6 +59,7 @@ div#all_layer{
 #all_layer .all_menu_layer{
 top: 10%;
 left:0;
+width: 20%;
 }
 .all_menu_con ul{
   flex-direction:column ;
