@@ -33,6 +33,7 @@ html{overflow-x: hidden;
         display: flex;
         justify-content: space-around;
         padding:14px;
+        box-sizing: border-box;
     }
     .intro .intro_banner{
         top:0px;
@@ -87,6 +88,9 @@ width: 20%;
     }
     #all_layer .all_menu_layer {
       width: 32%;
+    }
+    .intro_text{
+      box-sizing: border-box;
     }
     .intro_text>div>div {
       width: 100%;
@@ -171,7 +175,7 @@ width: 20%;
       overflow: hidden;
     }
     .info_event .event_imgbox img{
-      width: 780px;
+      width: 704px;
     }
     .event_board.w50{
       width: 100%;
