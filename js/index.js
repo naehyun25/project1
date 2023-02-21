@@ -315,7 +315,6 @@ $(function () {
   
 const gnb = document.querySelector("header");
 window.addEventListener("scroll",function(){
-  console.log(window.innerWidth)
   let windowY=parseInt(window.scrollY);
   let article=document.querySelectorAll("article");
   for(r=0; r<article.length; r++){
@@ -330,3 +329,5 @@ window.addEventListener("scroll",function(){
     gnb.classList.remove("fixed");
   }
 });
+
+
