@@ -23,7 +23,7 @@ let params = {
     nx : '65',
     ny : '110'
 }
-url = `${url}${params.type[0]}?serviceKey=${params.key}&pagNo=${params.pageNo}&numOfRows=${params.numOfRows}&dataType=${params.dataType}&base_date=${params.base_date}&base_time=${params.base_time}&nx=${params.nx}&ny=${params.ny}`
+url = `${url}${params.type[0]}?serviceKey=${params.key}&pageNo=${params.pageNo}&numOfRows=${params.numOfRows}&dataType=${params.dataType}&base_date=${params.base_date}&base_time=${params.base_time}&nx=${params.nx}&ny=${params.ny}`
 
 async function getPosts(){
     const res = await fetch(url);
@@ -71,13 +71,14 @@ async function setPosts(){
     }
     cast.rainInfo();
     cast.loc();
+    castp.textContent=`${pageNow} 독립기념관`
     castp.innerHTML=`
-        <span>${pageNow}</span>
-        <p>오늘 독립기념관 날씨는</p>
-        <p>${statusText}${rainIcon} </p>
-        <span>기온 : ${cast.temperature}℃</span>
-        <span>바람 : ${cast.wind}/ms</span>
-        <p><a href="https://www.weather.go.kr/w/index.do" style="font-size:12px">출처:기상청</a></p>
+        <div class="weather-result df">
+            <p>${statusText}</p>
+            <p style="font-size:24px">${rainIcon}</p>
+            <p>기온 : ${cast.temperature}℃</p>
+            <p><a href="https://www.weather.go.kr/w/index.do" style="font-size:12px">출처:기상청</a></p>
+        </div>
     `
     castCon.appendChild(castp);
 };

@@ -74,11 +74,14 @@ html {
   cursor: pointer;
   padding: 10px 20px;
   position: absolute;
-  right: 78px;
-  top: 112px;
+  right: 34px;
+  top: 130px;
   background-color: #222;
   color: #fff;
   border-radius: 20px;
+}
+#layer label{
+  font-size: 16px;
 }
 .ir_pm {display: block; overflow: hidden; font-size: 0; line-height: 0; text-indent: -9999px;}
 .ir_so {overflow: hidden; position: absolute; width: 0; height: 0; line-height: 0; text-indent: -9999px;}
@@ -590,10 +593,28 @@ dl > .pa {
   height: 28%;
   color:  #ffffff;
   text-align: center;
+  font-size: 1em;
 }
 #weather a{
   color:  #ffffff;
 }
+.weather-result, #dust
+{ width: 50%;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.dust-result{
+  width: 72%;
+  height: 80%;
+  
+}
+.dust-color{
+  box-sizing: border-box;
+  padding:14px 5px;
+  border-radius: 50%;
+}
+
 
 .banner_list ul {
   display: flex;
