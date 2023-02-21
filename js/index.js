@@ -94,12 +94,6 @@ $(function () {
       current=bBtnIdx;
       return false;
     });
-    
-   
-  
-  
-  
-  
   //메인배너영역
   
     const nSlides=$(".board_imgs");//비쥬얼
@@ -278,12 +272,6 @@ $(function () {
   
   const meMenus=$(".m_list ul li a");
   const mePannels=$(".m_texts>div");
-  // meMenus.mouseover(
-  //   function(){$(this).addClass('mactive');}   
-  //   )
-  // meMenus.mouseleave(
-  //   function(){$(this).removeClass('mactive');}   
-  //   )
   meMenus.click(function(m){
     m.preventDefault();
     let mTg=$(this);
@@ -311,10 +299,6 @@ $(function () {
   
   const bookingImgbox = $(".booking_imgbox li")
   const bookingImgA = $(".booking_imgbox li a")
-  // bookingImgbox.mouseover(function(){
-  //   $(this).find("img").css("top","-8px")})
-  // bookingImgbox.mouseleave(function(){
-  //     $(this).find("img").css("top","0px")})
   bookingImgbox.mouseover(function(){
     $(this).find("img").css("top","0px").stop().animate({top:"-12px"},300)})
   bookingImgbox.mouseleave(function(){
@@ -329,3 +313,23 @@ $(function () {
   })
   }); //jQuery
   
+const gnb = document.querySelector("header");
+window.addEventListener("scroll",function(){
+  let windowY=parseInt(window.scrollY);
+  let article=document.querySelectorAll("article");
+  for(r=0; r<article.length; r++){
+    console.log(article[r].clientHeight);
+    if(windowY>article[r].clientHeight){
+      article[r].classList.add('scroll');
+    }
+  }
+  
+  if(window.scrollY>1000){
+    if(window.innerWidth>1280){
+      gnb.style.height="97px"
+      gnb.classList.add("fixed");
+    }
+  }else{
+    gnb.classList.remove("fixed");
+  }
+});

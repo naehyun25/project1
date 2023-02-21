@@ -8,7 +8,6 @@ let pageNow = `${year}년 ${month}월 ${day}일`
 
 //Fetch
 const castCon = document.querySelector("#weather");
-console.log(castCon);
 let statusText,rainIcon,locText;
 rainIcon=['<i class="bi bi-cloud-drizzle"></i>','<i class="bi bi-brightness-high"></i>','<i class="bi bi-cloud"></i>','<i class="bi bi-cloud-snow"></i>',];
 
@@ -28,7 +27,6 @@ url = `${url}${params.type[0]}?serviceKey=${params.key}&pagNo=${params.pageNo}&n
 
 async function getPosts(){
     const res = await fetch(url);
-    console.log("res",res)
     const data = await res.json();
     return data;
 }
@@ -36,9 +34,7 @@ async function getPosts(){
 setPosts();
 async function setPosts(){
     const posts = await getPosts();
-    console.log(posts);
     const datas = posts.response.body.items.item;
-    console.log(datas);
     const castp = document.createElement('p');
 
     let cast={
@@ -68,7 +64,6 @@ async function setPosts(){
         ny:datas[0].ny,
         loc:function(){
             let point=[this.nx,this.ny];
-            console.log(point);
             if(point[0]==65 && point[1]==110){
                 locText="충남/천안"
             }
