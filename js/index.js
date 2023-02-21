@@ -315,20 +315,17 @@ $(function () {
   
 const gnb = document.querySelector("header");
 window.addEventListener("scroll",function(){
+  console.log(window.innerWidth)
   let windowY=parseInt(window.scrollY);
   let article=document.querySelectorAll("article");
   for(r=0; r<article.length; r++){
-    console.log(article[r].clientHeight);
-    if(windowY>article[r].clientHeight){
+    if(windowY>article[r].offsetTop-50){
       article[r].classList.add('scroll');
     }
   }
-  
-  if(window.scrollY>1000){
-    if(window.innerWidth>1280){
-      gnb.style.height="97px"
-      gnb.classList.add("fixed");
-    }
+  if(window.scrollY>800 && window.innerWidth>1420){
+    gnb.style.height="97px"
+    gnb.classList.add("fixed");
   }else{
     gnb.classList.remove("fixed");
   }
