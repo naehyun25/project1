@@ -5,7 +5,7 @@ let month = String(date.getMonth()+1).padStart(2,"0");
 let day = String(date.getDate()).padStart(2,"0");
 let now = year+month+day;
 let pageNow = `${year}년 ${month}월 ${day}일`
-
+let api = document.querySelector('.api');
 //Fetch
 const castCon = document.querySelector("#weather");
 let statusText,rainIcon,locText;
@@ -35,7 +35,7 @@ setPosts();
 async function setPosts(){
     const posts = await getPosts();
     const datas = posts.response.body.items.item;
-    const castp = document.createElement('p');
+    const castp = document.createElement('div');
 
     let cast={
         baseDate:datas[0].baseDate,
@@ -71,14 +71,15 @@ async function setPosts(){
     }
     cast.rainInfo();
     cast.loc();
-    castp.textContent=`${pageNow} 독립기념관`
     castp.innerHTML=`
-        <div class="weather-result df">
-            <p>${statusText}</p>
-            <p style="font-size:24px">${rainIcon}</p>
-            <p>기온 : ${cast.temperature}℃</p>
-            <p><a href="https://www.weather.go.kr/w/index.do" style="font-size:12px">출처:기상청</a></p>
-        </div>
-    `
+    <p class ="pr" style="right: 50px;">${pageNow} </p>
+    <div class="weather-result df">
+        <p>${statusText}</p>
+        <p style="font-size:24px">${rainIcon}</p>
+        <p>기온 ${cast.temperature}℃</p>
+        <p><a href="https://www.weather.go.kr/w/index.do" style="font-size:12px">출처:기상청</a></p>
+    </div>`
+        
+    
     castCon.appendChild(castp);
 };

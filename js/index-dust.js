@@ -34,6 +34,7 @@ async function setPosts(){
         dustText.textContent="나쁨"
         dustColor.style.background="#e9a16f"
     }else{dustText.textContent="매우나쁨"
+    dustText.style.lineHeight="1.0em"
     dustColor.style.background="#e26666"}
     
 };

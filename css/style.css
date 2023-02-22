@@ -1,4 +1,7 @@
 @charset "UTF-8";
+body{
+  overflow-x: hidden;
+}
 html {
   overflow-y: scroll;
 }
@@ -586,32 +589,44 @@ dl > .pa {
   justify-content: space-between;
   flex-direction: column;
 }
-
-#weather{
+.api{
   background-color: rgba(13, 13, 13, 0.534);
   border-radius: 20px;
-  height: 28%;
+  /*height: 28%; */
   color:  #ffffff;
   text-align: center;
-  font-size: 1em;
+  font-size: 0.9em;
+  width: 100%;
 }
-#weather a{
+#weather{
+  width: 50%;
+}
+#weather a,
+#dust a
+{
   color:  #ffffff;
 }
-.weather-result, #dust
-{ width: 50%;
+#dust{
+  width: 50%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  box-sizing: border-box;
+  padding-bottom: 30px;
+}
+.weather-result
+{ width: 100%;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
 }
 .dust-result{
-  width: 72%;
+  width: 76%;
   height: 80%;
-  
 }
 .dust-color{
   box-sizing: border-box;
-  padding:18px 5px;
+  padding:18px 20px;
   border-radius: 50%;
 }
 
