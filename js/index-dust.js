@@ -2,7 +2,7 @@ const dustCon = document.querySelector("#dust");
 let dustText = document.querySelector(".dust-text");
 let dustColor = document.querySelector(".dust-color")
 
-let dustUrl = 'http://apis.data.go.kr/B552584/ArpltnInforInqireSvc/getCtprvnRltmMesureDnsty';
+let dustUrl = 'https://apis.data.go.kr/B552584/ArpltnInforInqireSvc/getCtprvnRltmMesureDnsty';
 let parameter = {
     key : 'AveojOZ5ZNcfL29JQhWKdzFdcIOInK0reWkvwc%2B%2Bmzf5gGSgUoHNv24YP3jNGPiXAUqNyYSfpr2dtsynkZJOgg%3D%3D',
     returnType:'json',
