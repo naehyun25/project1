@@ -790,7 +790,7 @@ dl > .pa {
 }
 .board_table > ul > li > ul > li a span {
   display: inline-block;
-  width: 400px;
+  width: 380px;
   height: 25px;
   font-size: 16px;
   font-weight: 400;
@@ -800,7 +800,7 @@ dl > .pa {
   text-overflow: ellipsis;
 }
 .board_table > ul > li > ul > li a span:first-child {
-  width: 80%;
+  width: 440px;
 }
 .board_table > ul > li > ul > li a span:nth-child(2) {
   width: 20%;
