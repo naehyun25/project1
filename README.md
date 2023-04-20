@@ -42,7 +42,6 @@
 
 
 ## Acknowledgements
-Give credit here.
 - 메인 포트폴리오주소 [hear](https://naeportfolio.vercel.app/)
 - 개선할 점이나 조언사항 있으면 언제든 연락부탁드립니다.
 - 방문해주셔서 감사합니다.
