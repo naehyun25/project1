@@ -150,29 +150,6 @@ html {
 .all_menu_layer button img{
   width:30px;
 }
-/* quick메뉴 */
-#quick{
-  position:sticky;
-  top:76vh;
-  left:6vw;
-  z-index: 80;
-}
-.quick_bg{
-  position: absolute;
-  transform-origin: 50% 50%;
-  animation:quick 10s infinite ;
-  top: -41px;
-  left: -41px;
-}
-.quick_con{
-  position: absolute;
-  top: 38px;
-  left: 40px;
-}  
-@keyframes quick {
-  0%{transform:rotate(0deg)}
-  100%{transform:rotate(360deg)} 
-}
 /*header*/
 /*header_top영역 */
 #header {
